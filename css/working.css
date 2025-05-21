@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --primary-color: #14061c;
+        --accent-color: #471863;
+        --secondary-color: #f194b4;
+    }
+}
+body {
+    font-family: "Montserrat", sans-serif;
+}
+.italic-text-header {
+    font-family: "Lora", serif;
+    font-weight: 500;
+    color: var(--accent-color);
+    font-style: italic;
+}
+.italic-text {
+    font-family: "Lora", serif;
+    font-weight: 500;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+.italic {
+    font-family: "Lora", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+.container-custom {
+    max-width: min(75rem, 90%);
+    margin-inline: auto;
+}
+.custom-box-shadow {
+    box-shadow: 0px 6px 10.6px 0px #00000012;
+}
