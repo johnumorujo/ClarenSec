@@ -10,6 +10,24 @@
 body {
     font-family: "Plus Jakarta Sans", sans-serif;
 }
+.hero-image-service {
+    background-image: url("../images/Mask\ group.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 400px top;
+}
+.hero-image {
+    background-image: linear-gradient(to right, transparent, #47186300, #47186366), url("../images/Frame 5635.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+
+.side-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
