@@ -8,7 +8,7 @@
     }
 }
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 .hide-scrollbar {
     -ms-overflow-style: none;
@@ -40,4 +40,56 @@ body {
 }
 .custom-box-shadow {
     box-shadow: 0px 6px 10.6px 0px #00000012;
+}
+/* animations.css */
+
+@keyframes slide-up-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-left-fade {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right-fade {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.before-animate {
+    opacity: 0;
+    /* No animation here */
+}
+
+/* Your animation classes unchanged */
+.slide-up-fade {
+    animation: slide-up-fade 0.6s ease-out forwards;
+}
+
+.slide-left-fade {
+    animation: slide-left-fade 0.6s ease-out forwards;
+}
+
+.slide-right-fade {
+    animation: slide-right-fade 0.6s ease-out forwards;
 }

@@ -7,50 +7,88 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
     </style>
 </head>
 
 <body>
-    <nav class="container-custom md:h-20 flex flex-wrap justify-between items-center">
-        <a href=""><img src="images/logo/logo.webp" width="100" alt=""></a>
-        <ul class="flex gap-1">
-            <li><a class="inline-block px-2 py-1" href="">Home</a></li>
-            <li><a class="inline-block px-2 py-1" href="">About Us</a></li>
-            <li><a class="inline-block px-2 py-1" href="">Services</a></li>
-            <li><a class="inline-block px-2 py-1" href="">Blog</a></li>
-            <li><a class="inline-block px-2 py-1" href="">Contact</a></li>
 
-        </ul>
-        <a href=""
-            class="text-sm p-3 text-white bg-[var(--accent-color)] rounded-4xl inline-flex items-center justify-center gap-2">
-            <span>
-                Request a
-                Consultation
-            </span>
-            <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center"> <svg
-                    xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
-                    fill="#471863">
-                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                </svg></div>
-        </a>
+    <nav class="sticky top-0 bg-white z-50">
+
+        <div class="container-custom md:h-20 flex justify-between items-center relative">
+            <!-- Logo -->
+            <a href=""><img src="images/logo/logo.webp" width="100" alt=""></a>
+
+            <!-- Hamburger Button (Mobile Only) -->
+            <button id="menu-btn" class="md:hidden text-black focus:outline-none z-50">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+
+            <!-- Navigation Links (Desktop) -->
+            <ul class="hidden md:flex gap-4">
+                <li><a class="inline-block px-2 py-1" href="">Home</a></li>
+                <li><a class="inline-block px-2 py-1" href="">About Us</a></li>
+                <li><a class="inline-block px-2 py-1" href="">Services</a></li>
+                <li><a class="inline-block px-2 py-1" href="">Blog</a></li>
+                <li><a class="inline-block px-2 py-1" href="">Contact</a></li>
+            </ul>
+
+            <!-- CTA Button (Desktop) -->
+            <a href=""
+                class="hidden md:inline-flex text-sm p-3 text-white bg-[var(--accent-color)] rounded-4xl items-center gap-2">
+                <span>Request a Consultation</span>
+                <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                        fill="#471863">
+                        <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                    </svg>
+                </div>
+            </a>
+
+            <!-- Full-Screen Mobile Slide-In Menu -->
+            <div id="mobile-menu"
+                class="fixed top-0 left-0 h-screen w-full bg-white transform -translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden p-6">
+                <button id="close-menu" class="text-black text-3xl absolute top-6 right-6">✕</button>
+                <div class="mt-16 flex flex-col items-center gap-6 text-xl">
+                    <a href="">Home</a>
+                    <a href="">About Us</a>
+                    <a href="">Services</a>
+                    <a href="">Blog</a>
+                    <a href="">Contact</a>
+                    <a href=""
+                        class="text-sm p-3 px-6 text-white bg-[var(--accent-color)] rounded-4xl inline-flex items-center gap-2">
+                        Request a Consultation
+                        <div class="w-9 h-9 bg-white rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"
+                                fill="#471863">
+                                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </nav>
-    <header class="md:min-h-screen mt-8 mb-12 md:mb-0">
+
+    <header class="lg:min-h-screen mt-8 mb-12 md:mb-0">
         <div class="container-custom lg:mt-20">
-            <h1 class="text-5xl text-gray-900 font-semibold">
+            <h1 class="text-4xl/10 md:text-5xl/13 text-gray-900 font-semibold before-animate before-animate">
 
                 Protect Patient Data,
                 <br> Empowering <span class="italic-text-header">Healthcare.</span>
             </h1>
-            <p class="mt-4 md:w-200 text-gray-600">Protecting patient data with precision-engineered
+            <p class="mt-4 md:w-200 text-gray-600 before-animate before-animate">Protecting patient data with
+                precision-engineered
                 cybersecurity solutions — HIPAA-compliant, AI-driven, and
                 purpose-built for the complexities of modern healthcare. Our platform combines advanced threat
                 detection, real-time
                 monitoring, and scalable infrastructure to ensure your systems remain secure, compliant, and resilient.
             </p>
-            <div class="mt-8 flex flex-wrap gap-4">
+            <div class="mt-8 flex flex-wrap gap-4 before-animate before-animate">
                 <a href=""
                     class="text-sm p-3 text-white bg-[var(--accent-color)] rounded-4xl inline-flex items-center justify-center gap-2">
                     <span>
@@ -81,19 +119,23 @@
         </div>
     </header>
     <main>
-
+        <!-- second section  -->
         <section class="md:min-h-screen flex py-12 justify-center items-center container-custom">
             <div>
-                <h2 class="font-semibold text-4xl text-center text-gray-900 mb-6">Why Healthcare <span
-                        class="italic-text">Security</span> Matters</h2>
-                <p class="text-center mb-12 text-gray-700">Healthcare systems are a prime target for
-                    cybercriminals. Globally, the
+                <h2
+                    class="font-semibold md:text-4xl text-3xl text-center text-gray-900 mb-6 before-animate before-animate">
+                    Why
+                    Healthcare <span class="italic-text">Security</span> Matters</h2>
+                <p class="text-center mb-12 text-gray-700 before-animate before-animate">Healthcare systems
+                    are a prime
+                    target for
+                    cyber criminals. Globally, the
                     healthcare industry lags behind other sectors in
                     cybersecurity measures, making it particularly vulnerable to attacks.
                     In Nigeria specifically, digital health adoption has been slow: many facilities still rely on
                     paper-based records, and
                     those that implement digital records lack comprehensive IT protection.</p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6 before-animate before-animate">
                     <div class="p-6 custom-box-shadow rounded-xl text-center">
                         <h3 class="text-2xl font-semibold mb-4"> The <span class="italic">Risk</span></h3>
                         <p class="text-gray-700 text-sm/6">Healthcare is now the #1 target for cybercriminals
@@ -105,7 +147,7 @@
                         <h3 class="text-2xl font-semibold mb-4"> The <span class="italic">Impact</span></h3>
 
                         <p class="text-gray-700 text-sm/6">Attacks cause system downtime and risk patient safety. 
-                            Cyberattacks in healthcare aren’t
+                            Cyber attacks in healthcare aren’t
                             just about stolen data — they
                             can interrupt life-saving care. Ransomware can shut down entire hospital systems, delay
                             treatments, and make patient
@@ -124,8 +166,9 @@
                 </div>
             </div>
         </section>
+        <!-- third section  -->
         <section class="bg-[var(--primary-color)] py-12 ">
-            <div class="flex items-center justify-between gap-2 flex-wrap container-custom">
+            <div class="flex items-center justify-between gap-2 flex-wrap container-custom before-animate">
                 <div class="p-6 text-center text-white flex-1">
                     <h3 class="text-3xl font-bold "> 350+</h3>
                     <p class="text-xl font-semibold mt-1 mb-4"> Healthcare Facilities Secured</p>
@@ -156,23 +199,25 @@
             </div>
 
         </section>
+        <!-- fourth section  -->
         <section class="flex flex-column md:flex-row items-center gap-2 md:min-h-screen container-custom">
-            <div class="md:flex-1/2">
+            <div class="md:flex-1/2 slide-left-fade">
 
             </div>
-            <div class="md:flex-1/2 py-12">
-                <h2 class="text-4xl text-gray-900 font-semibold">
+            <div class="md:flex-1/2 py-12 slide-right-fade">
+                <h2 class="md:text-4xl text-3xl text-gray-900 font-semibold before-animate">
 
                     Stay Ahead of Healthcare <span class="italic-text-header">Cyber</span> Threats
                 </h2>
-                <p class="mt-4 text-gray-600">As healthcare providers embrace electronic health records, connected
+                <p class="mt-4 text-gray-600 before-animate">As healthcare providers embrace electronic health records,
+                    connected
                     devices, and
                     cloud-based platforms, the risk of
                     cyber attacks continues to surge. In 2023 alone, healthcare saw the highest average data breach cost
                     of any industry — a
                     staggering $10.93 million per incident, according to IBM’s Cost of a Data Breach Report.
                     But the true cost of a cyber attack goes far beyond financial penalties</p>
-                <div class="mt-8 flex flex-wrap gap-4">
+                <div class="mt-8 flex flex-wrap gap-4 before-animate slide-side">
                     <a href=""
                         class="text-sm p-3 text-white bg-[var(--accent-color)] rounded-4xl inline-flex items-center justify-center gap-2">
                         <span>
@@ -200,14 +245,16 @@
                 </div>
             </div>
         </section>
+        <!-- fifth section  -->
         <section class="md:min-h-screen bg-[#F2F2EF] md:py-8 py-4">
             <div class="container-custom">
-                <h2 class="text-4xl font-semibold mb-6 text-center">Hear What Our <span
+                <h2 class="md:text-4xl text-3xl font-semibold mb-6 text-center before-animate">Hear What Our <span
                         class="italic-text">Clients</span>
                     Have To Say</h2>
-                <p class="text-center">Hear What Our Clients Have To Say</p>
-                <div class="flex md:flex-wrap hide-scrollbar overflow-x-auto w-full md:justify-center gap-4 mt-10">
-                    <div class="w-80 flex-shrink-0 py-6 md:py-0 bg-white p-4 rounded-2xl">
+                <p class="text-center before-animate">Hear What Our Clients Have To Say</p>
+                <div
+                    class="flex md:flex-wrap hide-scrollbar overflow-x-auto w-full md:justify-center gap-4 mt-10 before-animate">
+                    <div class="w-80 flex-shrink-0 py-6 md:py-4 bg-white p-4 rounded-2xl">
                         <div class="flex gap-2 items-center mb-2">
                             <div class="w-12 h-12 rounded-full bg-gray-400"></div>
                             <div>
@@ -220,7 +267,7 @@
                             quaerat
                             maiores debitis?</p>
                     </div>
-                    <div class="w-80 flex-shrink-0 py-6 md:py-0 bg-white p-4 rounded-2xl">
+                    <div class="w-80 flex-shrink-0 py-6 md:py-4 bg-white p-4 rounded-2xl">
                         <div class="flex gap-2 items-center mb-2">
                             <div class="w-12 h-12 rounded-full bg-gray-400"></div>
                             <div>
@@ -233,7 +280,7 @@
                             quaerat
                             maiores debitis?</p>
                     </div>
-                    <div class="w-80 flex-shrink-0 py-6 md:py-0 bg-white p-4 rounded-2xl">
+                    <div class="w-80 flex-shrink-0 py-6 md:py-4 bg-white p-4 rounded-2xl">
                         <div class="flex gap-2 items-center mb-2">
                             <div class="w-12 h-12 rounded-full bg-gray-400"></div>
                             <div>
@@ -246,7 +293,7 @@
                             quaerat
                             maiores debitis?</p>
                     </div>
-                    <div class="w-80 flex-shrink-0 py-6 md:py-0 bg-white p-4 rounded-2xl">
+                    <div class="w-80 flex-shrink-0 py-6 md:py-4 bg-white p-4 rounded-2xl">
                         <div class="flex gap-2 items-center mb-2">
                             <div class="w-12 h-12 rounded-full bg-gray-400"></div>
                             <div>
@@ -259,7 +306,7 @@
                             quaerat
                             maiores debitis?</p>
                     </div>
-                    <div class="w-80 flex-shrink-0 py-6 md:py-0 bg-white p-4 rounded-2xl">
+                    <div class="w-80 flex-shrink-0 py-6 md:py-4 bg-white p-4 rounded-2xl">
                         <div class="flex gap-2 items-center mb-2">
                             <div class="w-12 h-12 rounded-full bg-gray-400"></div>
                             <div>
@@ -278,7 +325,7 @@
         </section>
     </main>
     <footer class=" bg-[var(--primary-color)] text-white py-6 md:py-20 md:m-4 rounded-2xl">
-        <div class="container-custom flex flex-column md:flex-row gap-12 flex-wrap">
+        <div class="container-custom flex flex-column md:flex-row gap-12 flex-wrap before-animate">
             <div class="md:flex-3 ">
                 <a href="" class="mb-8 block"><img src="images/logo/logo-white.webp" width="100" alt=""></a>
 
@@ -353,6 +400,55 @@
             <p class="text-sm text-center ">Copyright 2025 ClarenceSec. All Rights Reserved</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.remove('before-animate');
+                        if (entry.target.classList.contains("slide-side")) {
+
+                            entry.target.classList.add('slide-right-fade');
+                        } else {
+
+                            entry.target.classList.add('slide-up-fade');
+                        }
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.3,
+            });
+
+            document.querySelectorAll('.before-animate').forEach(el => observer.observe(el));
+
+        });
+
+
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+
+        function openMenu() {
+            mobileMenu.classList.remove('-translate-x-full');
+            menuBtn.classList.add('hidden');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('-translate-x-full');
+            menuBtn.classList.remove('hidden');
+        }
+
+        menuBtn.addEventListener('click', openMenu);
+        closeMenu.addEventListener('click', closeMobileMenu);
+
+        // Auto-close when any link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    </script>
 </body>
 
 </html>
