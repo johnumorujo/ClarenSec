@@ -16,6 +16,12 @@ body {
     background-size: cover;
     background-position: 400px top;
 }
+.hero-image-about {
+    background-image: url("../images/Mask\ group.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 400px top;
+}
 .hero-image {
     background-image: linear-gradient(to right, transparent, #47186300, #47186366), url("../images/Frame 5635.png");
     background-repeat: no-repeat;
