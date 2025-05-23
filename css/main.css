@@ -508,9 +508,6 @@
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
   }
-  .pb-4 {
-    padding-bottom: calc(var(--spacing) * 4);
-  }
   .pb-6 {
     padding-bottom: calc(var(--spacing) * 6);
   }
@@ -683,11 +680,6 @@
       height: calc(var(--spacing) * 20);
     }
   }
-  .md\:min-h-screen {
-    @media (width >= 48rem) {
-      min-height: 100vh;
-    }
-  }
   .md\:w-100 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 100);
@@ -793,11 +785,6 @@
   .lg\:max-h-80 {
     @media (width >= 64rem) {
       max-height: calc(var(--spacing) * 80);
-    }
-  }
-  .lg\:min-h-screen {
-    @media (width >= 64rem) {
-      min-height: 100vh;
     }
   }
   .lg\:w-80 {
