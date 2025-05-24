@@ -859,6 +859,11 @@
       padding-top: calc(var(--spacing) * 20);
     }
   }
+  .xl\:h-200 {
+    @media (width >= 80rem) {
+      height: calc(var(--spacing) * 200);
+    }
+  }
   .xl\:min-h-screen {
     @media (width >= 80rem) {
       min-height: 100vh;
@@ -874,9 +879,8 @@
 }
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-}
-.xl:min-h-screen {
-  max-height: 1000px;
+  margin-inline: auto;
+  max-width: 1920px;
 }
 .hero-image-service {
   background-image: url("../images/Mask\ group.webp");
