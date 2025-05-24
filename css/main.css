@@ -875,6 +875,9 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
 }
+.xl:min-h-screen {
+  max-height: 1000px;
+}
 .hero-image-service {
   background-image: url("../images/Mask\ group.webp");
   background-repeat: no-repeat;
