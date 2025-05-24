@@ -14,6 +14,8 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-xl: 1.25rem;
@@ -300,6 +302,9 @@
   .inline-flex {
     display: inline-flex;
   }
+  .aspect-square {
+    aspect-ratio: 1 / 1;
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
@@ -489,6 +494,12 @@
   .bg-white {
     background-color: var(--color-white);
   }
+  .bg-contain {
+    background-size: contain;
+  }
+  .bg-cover {
+    background-size: cover;
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -557,6 +568,10 @@
   .text-xl {
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
