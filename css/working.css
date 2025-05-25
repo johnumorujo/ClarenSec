@@ -31,6 +31,9 @@ body {
     background-size: cover;
     background-position: center top;
 }
+.purple-overlay {
+    background-image: linear-gradient(to right, transparent, #47186300, #47186366);
+}
 
 .side-image img {
     height: 100%;
@@ -120,3 +123,6 @@ body {
 .slide-right-fade {
     animation: slide-right-fade 0.6s ease-out forwards;
 }
+.smaller{
+    font-size: 9.5px;
+  }

@@ -52,7 +52,7 @@ closeMenu.addEventListener("click", closeMobileMenu)
 mobileLinks.forEach((link) => {
     link.addEventListener("click", closeMobileMenu)
 })
-function countUpUnified(el, duration = 2000, decimals = 2) {
+function countUpUnified(el, duration =1000, decimals = 2) {
     const target = parseFloat(el.dataset.target)
     const isDecimal = target % 1 !== 0
     const frameRate = 60 // 60 FPS
