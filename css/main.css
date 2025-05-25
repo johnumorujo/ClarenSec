@@ -864,9 +864,9 @@
       height: calc(var(--spacing) * 200);
     }
   }
-  .xl\:min-h-screen {
+  .xl\:min-h-200 {
     @media (width >= 80rem) {
-      min-height: 100vh;
+      min-height: calc(var(--spacing) * 200);
     }
   }
 }
