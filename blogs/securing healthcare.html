@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Home - Clarence Sec Limited</title>
+    <meta name="description" content="" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Clarence Sec Limited" />
+    <meta property="og:title" content="Clarence Sec Limited" />
+    <meta
+      property="og:description"
+      content="HIPAA-compliant, AI-powered cybersecurity built for healthcare. Secure, monitor, and scale with confidence in a complex digital landscape."
+    />
+    <meta
+      property="og:image"
+      content="https://clarensec.com/images/logo/logo.png"
+    />
+    <meta property="og:url" content="https://clarensec.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Clarence Sec Limited" />
+    <meta
+      name="twitter:description"
+      content="HIPAA-compliant, AI-powered cybersecurity built for healthcare. Secure, monitor, and scale with confidence in a complex digital landscape."
+    />
+    <meta
+      name="twitter:image"
+      content="https://clarensec.com/images/logo/logo.png"
+    />
+    <!-- Standard favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- PNG Icons for modern browsers -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/logo/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/logo/favicon-16x16.png"
+    />
+
+    <!-- Apple Touch Icon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/logo/apple-touch-icon.png"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+    </style>
+    <script src="/js/main.js" defer></script>
+  </head>
+
+  <body>
+    <!-- Loader Container -->
+    <div
+      id="loader"
+      class="fixed inset-0 bg-white bg-opacity-70 flex items-center justify-center z-100"
+    >
+      <div
+        class="w-12 h-12 border-4 border-[var(--accent-color)] border-t-transparent rounded-full animate-spin"
+      ></div>
+    </div>
+
+    <nav class="sticky top-0 bg-white z-50">
+      <div
+        class="container-custom md:h-20 flex justify-between items-center relative"
+      >
+        <!-- Logo -->
+        <a href="/"
+          ><img src="/images/logo/logo.webp" width="100" alt="logo"
+        /></a>
+
+        <!-- Hamburger Button (Mobile Only) -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-black focus:outline-none z-50"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Navigation Links (Desktop) -->
+        <ul class="hidden md:flex gap-4">
+          <li><a class="inline-block px-2 py-1" href="/index.html">Home</a></li>
+          <li>
+            <a class="inline-block px-2 py-1" href="/about.html">About Us</a>
+          </li>
+          <li>
+            <a class="inline-block px-2 py-1" href="/services.html">Services</a>
+          </li>
+          <li><a class="inline-block px-2 py-1" href="/blog.html">Blog</a></li>
+          <li>
+            <a class="inline-block px-2 py-1" href="/contact.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- CTA Button (Desktop) -->
+        <a
+          href="/contact.html"
+          class="hidden md:inline-flex text-sm p-3 px-4 text-white bg-[var(--accent-color)] rounded-4xl items-center gap-2"
+        >
+          <span>Request a Consultation</span>
+          <div
+            class="w-9 h-9 bg-white rounded-full flex items-center justify-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="20px"
+              viewBox="0 -960 960 960"
+              width="20px"
+              fill="#471863"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </div>
+        </a>
+
+        <!-- Full-Screen Mobile Slide-In Menu -->
+        <div
+          id="mobile-menu"
+          class="fixed top-0 left-0 h-screen w-full bg-white transform -translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden p-6"
+        >
+          <button
+            id="close-menu"
+            class="text-black text-3xl absolute top-6 right-6"
+          >
+            ✕
+          </button>
+          <div class="mt-16 flex flex-col items-center gap-6 text-xl">
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About Us</a>
+            <a href="/services.html">Services</a>
+            <a href="/blog.html">Blog</a>
+            <a
+              href="/contact.html"
+              class="text-sm p-3 px-6 text-white bg-[var(--accent-color)] rounded-4xl inline-flex items-center gap-2"
+            >
+              Request a Consultation
+              <div
+                class="w-9 h-9 bg-white rounded-full flex items-center justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20px"
+                  viewBox="0 -960 960 960"
+                  width="20px"
+                  fill="#471863"
+                >
+                  <path
+                    d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                  />
+                </svg>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-custom my-8 flex flex-col lg:flex-row gap-8">
+      <!-- second section  -->
+      <section class="lg:flex-1/3">
+        <h1 class="text-2xl lg:text-3xl font-semibold text-gray-900 mb-4">
+          Securing <span class="italic-text">Healthcare</span> in Nigeria:
+          Protecting Patients in the
+          <span class="italic-text-header">Digital</span> Age.
+        </h1>
+        <p class="mb-8 text-gray-500 text-sm">
+          Explore how Nigeria’s healthcare sector is becoming a prime target for
+          cybercriminals amidst the shift to digital systems.
+        </p>
+        <div class="rounded-xl w-full lg:h-100 h-80 overflow-clip mb-8">
+          <img
+            src="/images/hacker.jpg"
+            alt="blog image"
+            class="w-full h-full bg-cover"
+          />
+        </div>
+        <article class="text-justify text-gray-600">
+          <p>
+            Initiatives like the National Digital Health Initiative are ushering
+            in electronic medical records (EMRs), interconnected health
+            information systems, and IoT-enabled medical devices. These
+            technologies promise better care and wider access, but they also
+            introduce serious cybersecurity risks. <br />2024 marked a turning
+            point in global cybersecurity. According to Deloitte, there was a
+            surge in cyber threats across all sectors, from ransomware to
+            insider attacks. Nigerian businesses were not spared, and critical
+            infrastructure including healthcare was directly targeted.
+            Predictions show that ransomware actors will continue focusing on
+            critical sectors like healthcare and government organizations in
+            Nigeria. <br />The message is clear: the rate of cybercrime is
+            rising, and healthcare institutions have become a juicy target.
+          </p>
+          <h2 class="mt-6 text-xl font-semibold text-gray-800">
+            Why Healthcare Is a Prime Target
+          </h2>
+          <ul class="mt-2 space-y-2">
+            <li>
+              1. Highly Valuable Sensitive Personal Data Medical records contain
+              a rich blend of sensitive personal, medical, and sometimes
+              financial data. On the dark web, health records are worth more
+              than credit cards, making them a top target for cybercriminals.
+            </li>
+            <li>
+              2. Pressure to Stay Online Hospitals operate in life-critical
+              environments. Hackers exploit this urgency, knowing that many
+              facilities will pay ransoms to avoid disruptions to care.
+            </li>
+            <li>
+              3. Lack of Planning with security in mind. Most hospitals in
+              Nigeria are recently transitioning to EMR systems and rely on
+              systems not designed with securityin mind.
+            </li>
+          </ul>
+
+          <p class="mt-4">
+            These systems often lack basic protections and are now being linked
+            with newer technologies and even accessible over the open internet;
+            a combination that introduces an untold number of security
+            vulnerabilities. To protect patient data, ensure continuous care,
+            and maintain trust, Nigerian healthcare providers must prioritize
+            security now.
+            <br />Clarensec’s mission is to help healthcare institutions build
+            cyber resilience, safeguard patients, and keep services running;
+            even in the face of rising threats. Cyberattacks on healthcare
+            aren’t just about stolen data; they directly endanger lives. In May
+            2024, a major ransomware attack in the U.S. crippled a hospital
+            network’s EMRs for two weeks. Ambulances were rerouted, and
+            hospitals had to return to Paper charts, causing patients to face
+            dangerous delays. <br />Cybercriminals treat hospitals like a body
+            to be destroyed degrading care without any concern for patients.
+            Tampered or missing records can lead to misdiagnosis, wrong
+            medications, or treatment delays. Securing health IT systems is
+            literally a matter of life and death.
+          </p>
+          <h2 class="mt-6 text-xl font-semibold text-gray-800">
+            Challenges in Nigerian Healthcare Security
+          </h2>
+          <ul class="mt-2 space-y-2">
+            <h3 class="mt-6 text-xl font-semibold text-gray-800">
+              Limited Resources
+            </h3>
+            <li>
+              Most Nigerian hospitals operate with tight IT budgets and minimal
+              to no cybersecurity funding; even as 24/7 uptime is demanded.
+            </li>
+            <h3 class="mt-6 text-xl font-semibold text-gray-800">
+              Skills Gaps
+            </h3>
+            <li>
+              There is a severe shortage of trained cybersecurity professionals
+              in the healthcare space. Also, Human error remains a major risk,
+              from phishing attacks to security misconfigurations.
+            </li>
+            <h3 class="mt-6 text-xl font-semibold text-gray-800">
+              Weak Regulations
+            </h3>
+            <li>
+              Nigeria’s health data laws are still developing. Many providers
+              lack clear policies or enforcement structures around patient data
+              protection.
+            </li>
+            <h2 class="mt-6 text-xl font-semibold text-gray-800">
+              How <span class="italic-text-header">ClarenSec</span> Can Help
+            </h2>
+            <li>
+              Clarensec partners with hospitals, clinics, and health
+              organizations to proactively defend against cyber threats.
+            </li>
+            <h3 class="mt-6 text-xl font-semibold text-gray-800">
+              Penetration Testing
+            </h3>
+            <li>
+              We simulate real-world attacks on your network, applications, and
+              devices, revealing vulnerabilities before criminals find them.
+            </li>
+            <h3 class="mt-6 text-xl font-semibold text-gray-800">
+              Red Team Assessments
+            </h3>
+            <li>
+              Our team acts like a persistent attacker, testing your defenses
+              across multiple layers. This gives leadership clear visibility
+              into how an attacker might breach their systems. “Red teamers help
+              an organization see itself from an attacker’s lens.” — Trustwave,
+              2024
+            </li>
+            <h3 class="mt-6 text-xl font-semibold text-gray-800">
+              Cybersecurity Assessments
+            </h3>
+            <li>
+              We conduct comprehensive risk reviews, evaluating your policies,
+              systems, and configurations to identify and prioritize security
+              improvements.
+            </li>
+            <h3 class="mt-6 text-xl font-semibold text-gray-800">
+              Staff Training and Support
+            </h3>
+            <li>
+              Clarensec provides targeted training: anti-phishing, incident
+              response drills, and security best practices, empowering staff to
+              become part of the defense.
+            </li>
+          </ul>
+          <p class="mt-4">
+            <h2 class="mt-6 text-xl font-semibold text-gray-800">What You Can Do Today!</h2>
+            Start with a basic self-check:
+            <br />
+            ✅ Apply critical patches to servers, workstations, and medical
+            devices
+            <br />
+            ✅ Back up data regularly, and store backups offline or offsite
+            <br />
+            ✅ Restrict access by applying least-privilege principles and strong
+            authentication
+            <br />
+            ✅ Train staff to recognize phishing emails and protect sensitive
+            data
+            <br />
+            ✅ Test your response plan with a simple tabletop drill. These
+            actions can expose immediate risks and reduce your attack surface
+            significantly.
+          </p>
+          <p class="mt-4">
+            Partner With <span class="italic-text-header">ClarenSec</span>! Don’t wait for a crisis before you act. Cyber
+            threats won’t wait till you are ready! The sooner you act, the safer
+            your patients will be. Schedule a consultation today!
+          </p>
+        </article>
+      </section>
+      <!-- SECTION  -->
+      <section
+        class="lg:flex-1 flex flex-col gap-8 my-8 lg:sticky lg:top-0 h-fit"
+      >
+        <h2 class="text-2xl font-bold text-center">Related Posts</h2>
+        <article class="bg-white custom-box-shadow p-3 rounded-xl">
+          <div class="h-60 rounded-xl">
+            <img
+              src="/images/6706379_3418448 1.png"
+              width="313"
+              height="205"
+              class="w-full h-full rounded-xl"
+              alt=""
+            />
+          </div>
+          <h3 class="text-xl font-semibold mt-2">Cyber Crimes</h3>
+          <p class="text-gray-600">May 4, 2025</p>
+          <p class="mt-4 text-gray-600">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+            sit sint dignissimos?
+          </p>
+          <a
+            href="/blogpost.html"
+            class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
+            >Read More</a
+          >
+        </article>
+        <article class="bg-white custom-box-shadow p-3 rounded-xl">
+          <div class="h-60 rounded-xl">
+            <img
+              src="/images/6706379_3418448 1.png"
+              width="313"
+              height="205"
+              class="w-full h-full rounded-xl"
+              alt=""
+            />
+          </div>
+          <h3 class="text-xl font-semibold mt-2">Cyber Crimes</h3>
+          <p class="text-gray-600">May 4, 2025</p>
+          <p class="mt-4 text-gray-600">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+            sit sint dignissimos?
+          </p>
+          <a
+            href="/blogpost.html"
+            class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
+            >Read More</a
+          >
+        </article>
+      </section>
+    </main>
+    <footer
+      class="bg-[var(--primary-color)] text-white py-6 md:py-20 md:m-4 rounded-2xl relative overflow-hidden"
+    >
+      <img
+        src="/images/footer icon.webp"
+        class="absolute right-10 top-10 opacity-20"
+        height="300"
+        width="300"
+        alt="footer icon"
+      />
+      <div
+        class="container-custom flex flex-column md:flex-row gap-12 flex-wrap before-animate"
+      >
+        <!-- FOOTER FIRST SECTION  -->
+        <div class="md:flex-3">
+          <!-- FOOTER LOGO -->
+          <a href="/index.html" class="mb-8 block"
+            ><img src="/images/logo/logo-white.webp" width="100" alt=""
+          /></a>
+
+          <p class="mb-6 md:w-100">
+            Our mission is to safeguard health data; one of the most sensitive
+            forms of personal information, ensuring it remains secure and
+            confidential at all times.
+          </p>
+          <!-- FOOTER SOCIAL MEDIA LINKS  -->
+          <ul class="space-x-2">
+            <!-- INSTAGRAM SOCIAL MEDIA LINK -->
+            <li class="inline-block">
+              <a
+                href="https://www.instagram.com/clarensecltd/"
+                class="inline-block"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448
+                                                            512"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    fill="white"
+                    stroke-color="var(--primary-color)"
+                    d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <!-- TIKTOK SOCIAL MEDIA LINK -->
+            <li class="inline-block">
+              <a
+                href="https://www.tiktok.com/@clarensecltd"
+                class="inline-block"
+              >
+                <svg
+                  fill="#fff"
+                  width="32px"
+                  height="32px"
+                  viewBox="0 0 256 256"
+                  id="Flat"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M232,84v40a7.99977,7.99977,0,0,1-8,8,103.32406,103.32406,0,0,1-48.00049-11.70752L176,156A76,76,0,1,1,86.59766,81.17971,7.99952,7.99952,0,0,1,96,89.05569l-.00049,41.63916a7.99971,7.99971,0,0,1-4.56689,7.22607A20.00272,20.00272,0,1,0,120,156V28a7.99977,7.99977,0,0,1,8-8h40a7.99977,7.99977,0,0,1,8,8,48.05436,48.05436,0,0,0,48,48A7.99977,7.99977,0,0,1,232,84Z"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <!-- LINKEDIN SOCIAL MEDIA LINK -->
+            <li class="inline-block">
+              <a
+                href="https://www.linkedin.com/company/clarensecltd"
+                class="inline-block"
+              >
+                <svg
+                  fill="#fff"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 256 256"
+                  id="Flat"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g
+                    id="SVGRepo_tracerCarrier"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M212,28H44A16.01817,16.01817,0,0,0,28,44V212a16.01833,16.01833,0,0,0,16,16H212a16.01833,16.01833,0,0,0,16-16V44A16.01817,16.01817,0,0,0,212,28ZM96,176.001a8,8,0,1,1-16,0v-64a8,8,0,0,1,16,0ZM88,92a12,12,0,1,1,12-12A12,12,0,0,1,88,92Zm96,84.001a8,8,0,1,1-16,0v-36a20,20,0,0,0-40,0v36a8,8,0,1,1-16,0v-64a7.99729,7.99729,0,0,1,15.79492-1.77857A35.98125,35.98125,0,0,1,184,140.001Z"
+                    ></path>
+                  </g>
+                </svg>
+              </a>
+            </li>
+            <!-- X SOCIAL MEDIA LINK -->
+            <li class="inline-block">
+              <a href="https://x.com/clarensecltd" class="inline-block">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 448 512"
+                  fill="white"
+                  stroke-color="var(--primary-color)"
+                  width="32"
+                  height="32"
+                >
+                  <path
+                    d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm297.1 84L257.3 234.6 379.4 396H283.8L209 298.1 123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5L313.6 116h47.5zM323.3 367.6L153.4 142.9H125.1L296.9 367.6h26.3z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- FOOTER QUICK LINKS  -->
+        <div class="md:flex-1 w-full min-w-80">
+          <ul class="space-y-2">
+            <li class="font-semibold mb-4">Quick Links</li>
+            <li class="index.html"><a href="/">Home</a></li>
+            <li class="about.html"><a href="/about.html">About Us</a></li>
+            <li class="services.html"><a href="/services.html">Services</a></li>
+            <li class="blog.html"><a href="/blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <!-- FOOTER CONTACT LINKS  -->
+        <div class="md:flex-2 w-full min-w-80">
+          <ul class="space-y-2">
+            <li class="font-semibold mb-4">Contact</li>
+            <li class=""><span>I1 Treasure Estate, Idu Abuja.</span></li>
+            <li class="">
+              <a href="tel:+2348143101878"><span>+2348143101878</span></a>
+            </li>
+            <li class="">
+              <a href="mailto:info@clarensec.com"
+                ><span>info@clarencesec.com</span></a
+              >
+            </li>
+          </ul>
+          <a
+            href="/contact.html"
+            class="mt-4 text-sm p-3 bg-white text-[var(--accent-color)] rounded-3xl inline-flex items-center justify-center gap-2"
+          >
+            <span>Request a Consultation</span>
+            <div class="flex items-center justify-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="20px"
+                viewBox="0 -960 960 960"
+                width="20px"
+                fill="var(--accent-color)"
+              >
+                <path
+                  d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="container-custom">
+        <div class="w-full bg-gray-400 h-[1px] md:mt-12 mt-6 mb-6"></div>
+        <p class="text-sm text-center">
+          Copyright © 2025 Clarence Sec Ltd. All Rights Reserved
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

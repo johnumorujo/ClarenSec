@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>403 Forbidden | Clarensec</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --legacy-purple: rgb(71, 24, 99);
+        --alte-black: rgb(20, 6, 28);
+        --alabaster: rgb(242, 242, 239);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: var(--alabaster);
+        color: var(--alte-black);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 3%;
+        width: 100%;
+        height: 100%;
+        background-image: url("ICON.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 80%;
+        opacity: 0.12;
+        z-index: -1;
+      }
+
+      .container {
+        max-width: 600px;
+      }
+
+      h1 {
+        font-size: 4rem;
+        color: var(--legacy-purple);
+        margin-bottom: 1rem;
+      }
+
+      #message {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      a {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: var(--legacy-purple);
+        color: var(--alabaster);
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: rgb(90, 30, 130);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>403</h1>
+      <p id="message">Loading forbidden message...</p>
+      <a href="/">Return to Homepage</a>
+    </div>
+
+    <script>
+      const messages = [
+        "🐾 Oops! You’ve wandered into a part of the site that’s off-limits. Let’s head back before anyone notices.",
+        "🔐 Access denied. You’ve found the secret door, but you don’t have the magic key... yet. 🗝️",
+        "🐹💻 403: This area is under high-level encryption and guarded by cyber hamsters. No entry!",
+        "🧙‍♂️✨ Forbidden! The spell protecting this page repels all unauthorized adventurers. Only the chosen may proceed.",
+        "🐱‍👤🚫 You found a hidden path... but only trained ninjas are allowed beyond this point.",
+        "😇🔒 Looks like you're trying to sneak into a VIP section. No hard feelings, but this page is for authorized eyes only.",
+        "🚫🌌 This space is off-limits. Even the stars can't guide you here.",
+        "🚷🛡️ 403 Forbidden. The firewall dragons have blocked your way. Better luck next time!"
+      ];
+
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById("message").textContent = randomMessage;
+    </script>
+  </body>
+</html>
+
