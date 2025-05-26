@@ -1,6 +1,7 @@
-node_modules
+node_modules/
 compile tailwind
 .gitignore
 package.json
 package-lock.json
 README.md
+.git/
