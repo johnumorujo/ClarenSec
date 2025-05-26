@@ -3,3 +3,4 @@ compile tailwind
 .gitignore
 package.json
 package-lock.json
+README
