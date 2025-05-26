@@ -1,0 +1,12 @@
+# Use index.html as the default page
+DirectoryIndex index.html
+
+# Disable directory listing
+Options -Indexes
+
+# Hide server signature (may not fully work on shared hosting)
+ServerSignature Off
+
+# Optional: Serve a custom error page for forbidden directory access
+ErrorDocument 403 /403.html
+ErrorDocument 404 /404.html
