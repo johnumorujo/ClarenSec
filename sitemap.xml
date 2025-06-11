@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://clarensec.com/</loc>
-    <lastmod>2025-05-26</lastmod>
+    <lastmod>2025-06-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -26,14 +26,46 @@
   </url>
   <url>
     <loc>https://clarensec.com/blog.html</loc>
-    <lastmod>2025-05-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
+
+  <!-- Blog Posts -->
   <url>
-    <loc>https://clarensec.com/blogs/securing-healthcare.html</loc>
-    <lastmod>2025-05-26</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://clarensec.com/blog/an-incident-response-story.html</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clarensec.com/blog/cybersecurity-ground-up.html</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clarensec.com/blog/partnering-for-privacy.html</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clarensec.com/blog/securing-healthcare.html</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clarensec.com/blog/Starting-Your-Cybersecurity-Program-First-Steps-for-Hospitals.html</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clarensec.com/blog/why-security-matters.html</loc>
+    <lastmod>2025-06-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
 </urlset>
