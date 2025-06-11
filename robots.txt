@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Allow: /blog/
+Allow: /sitemaps/
+Allow: /assets/
 
-Sitemap: https://clarensec.com/sitemap.xml
+Sitemap: https://clarensec.com/sitemap-index.xml
