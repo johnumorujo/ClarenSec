@@ -21,6 +21,5 @@ RewriteEngine On
 
 # If the request is not a directory and .html file exists, serve it
 
-RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
 RewriteRule ^(.+?)/?$ $1.html [L]
