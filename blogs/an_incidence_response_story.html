@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css" />
-    <title>Blog - Clarence Sec Limited</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <title>Home - Clarence Sec Limited</title>
     <meta
       name="description"
       content="Clarensec is a Nigerian tech startup providing specialized cybersecurity for healthcare. We help hospitals secure patient data, meet NDPA compliance, and defend against cyber threats with expert-driven security solutions."
@@ -40,26 +40,26 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="images/logo/favicon-32x32.png"
+      href="/images/logo/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="images/logo/favicon-16x16.png"
+      href="/images/logo/favicon-16x16.png"
     />
 
     <!-- Apple Touch Icon -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="images/logo/apple-touch-icon.png"
+      href="/images/logo/apple-touch-icon.png"
     />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
     </style>
-    <script src="js/main.js" defer></script>
+    <script src="/js/main.js" defer></script>
   </head>
 
   <body>
@@ -79,7 +79,7 @@
       >
         <!-- Logo -->
         <a href="/"
-          ><img src="images/logo/logo.webp" width="100" alt="logo"
+          ><img src="/images/logo/logo.webp" width="100" alt="logo"
         /></a>
 
         <!-- Hamburger Button (Mobile Only) -->
@@ -105,21 +105,22 @@
 
         <!-- Navigation Links (Desktop) -->
         <ul class="hidden md:flex gap-4">
-          <li><a class="inline-block px-2 py-1" href="index.html">Home</a></li>
+          <li><a class="inline-block px-2 py-1" href="/index.html">Home</a></li>
           <li>
-            <a class="inline-block px-2 py-1" href="about.html">About Us</a>
+            <a class="inline-block px-2 py-1" href="/about.html">About Us</a>
           </li>
           <li>
-            <a class="inline-block px-2 py-1" href="services.html">Services</a>
+            <a class="inline-block px-2 py-1" href="/services.html">Services</a>
           </li>
+          <li><a class="inline-block px-2 py-1" href="/blog.html">Blog</a></li>
           <li>
-            <a class="inline-block px-2 py-1" href="contact.html">Contact</a>
+            <a class="inline-block px-2 py-1" href="/contact.html">Contact</a>
           </li>
         </ul>
 
         <!-- CTA Button (Desktop) -->
         <a
-          href="contact.html"
+          href="/contact.html"
           class="hidden md:inline-flex text-sm p-3 px-4 text-white bg-[var(--accent-color)] rounded-4xl items-center gap-2"
         >
           <span>Request a Consultation</span>
@@ -152,12 +153,12 @@
             ✕
           </button>
           <div class="mt-16 flex flex-col items-center gap-6 text-xl">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="services.html">Services</a>
-            <a href="contact.html">Contact</a>
+            <a href="/index.html">Home</a>
+            <a href="/about.html">About Us</a>
+            <a href="/services.html">Services</a>
+            <a href="/blog.html">Blog</a>
             <a
-              href="contact.html"
+              href="/contact.html"
               class="text-sm p-3 px-6 text-white bg-[var(--accent-color)] rounded-4xl inline-flex items-center gap-2"
             >
               Request a Consultation
@@ -182,186 +183,248 @@
       </div>
     </nav>
 
-    <header class="container-custom py-8">
-      <h1
-        class="lg:w-180 mx-auto text-4xl/10 text-center md:text-5xl/13 text-gray-900 font-semibold"
-      >
-        Insights on Cyber Security and Modern
-        <span class="italic-text-header">Healthcare.</span>
-      </h1>
-      <p class="mt-4 mx-auto text-center md:w-200 text-gray-600">
-        Explore expert articles, news and practical tips on securing digital
-        health systems.
-      </p>
-    </header>
-
-    <main class="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 container-custom">
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/man-holding-smartphone-with-apartment-buildings-hologram.jpg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          Starting Your
-          <span class="italic-text-header">Cybersecurity</span> Program: First
-          Steps for Hospitals
-        </h3>
-        <p class="text-gray-600">June 10, 2025</p>
-        <p class="mt-4 text-gray-600">
-          Healthcare data is extremely valuable to attackers. Studies note that
-          electronic patient records and protected health information (PHI) are
-          often more lucrative than other data. Yet...
-        </p>
-        <a
-          href="/blogs/Starting_Your_Cybersecurity_Program_First_Steps_for_Hospitals.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/ransomware.svg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
+    <main class="container-custom my-8 flex flex-col lg:flex-row gap-8">
+      <!-- second section  -->
+      <section class="lg:flex-1/3">
+        <h1 class="text-2xl lg:text-3xl font-semibold text-gray-900 mb-4">
           When Disaster Strikes: An
           <span class="italic-text-header">Incident Response</span> Story
-        </h3>
-        <p class="text-gray-600">June 12, 2025</p>
-        <p class="mt-4 text-gray-600">
-          <strong>Monday Morning:</strong> At 'Oto' General Hospital in Ibadan,
-          the new week started like any other. Doctors reviewed schedules,
-          nurses updated charts, and lab technicians logged in...
+        </h1>
+        <p class="mb-8 text-gray-500 text-sm">
+          A fictional but realistic story about a hospital in Ibadan.
         </p>
-        <a
-          href="/blogs/an_incidence_response_story.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
+        <div class="rounded-xl w-full lg:h-100 h-80 overflow-clip mb-8">
           <img
-            src="images/ground-up.jpg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
+            src="/images/ransomware.svg"
+            alt="blog image"
+            class="w-full h-full bg-cover"
           />
         </div>
-        <h3 class="text-xl font-semibold mt-2">
-          A Hospital’s Journey: Building
-          <span class="italic-text-header">Cybersecurity</span> from the Ground
-          Up
-        </h3>
-        <p class="text-gray-600">June 5, 2025</p>
-        <p class="mt-4 text-gray-600">
-          In May 2025, the management of a private hospital in South-West
-          Nigeria received a wake-up call. A dismissed staff member was caught
-          remotely ...
-        </p>
-        <a
-          href="blogs/cybersecurity-ground-up.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="images/ndpc-all.jpg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          Partnering for Patient Privacy:
-          <span class="italic-text-header">Clarensec’s</span> Visit to the NDPC
-        </h3>
-        <p class="text-gray-600">May 31, 2025</p>
-        <p class="mt-4 text-gray-600">
-          On April 25, 2025, a delegation from Clarensec paid a courtesy visit
-          to the Nigerian Data Protection Commission (NDPC) to share our vision
-          for improving the security of health information systems ...
-        </p>
-        <a
-          href="blogs/partnering-for-privacy.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="images/doctor-wearing-glove.jpg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          Why <span class="italic-text-header">Cybersecurity</span> Matters in
-          Nigerian Hospitals
-        </h3>
-        <p class="text-gray-600">June 3, 2025</p>
-        <p class="mt-4 text-gray-600">
-          As Nigeria’s healthcare system becomes increasingly digital, hospitals
-          across the country are adopting Electronic Medical Records (EMRs),
-          telemedicine platforms...
-        </p>
-        <a
-          href="blogs/why-security-matters.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
+        <article class="text-justify text-gray-600">
+          <p>
+            <strong>Monday Morning:</strong> At 'Oto' General Hospital in
+            Ibadan, the new week started like any other. Doctors reviewed
+            schedules, nurses updated charts, and lab technicians logged in to
+            the Electronic Medical Record (EMR) system.
+            <br />
+            By 9:15 a.m., chaos erupted: all computers suddenly displayed a
+            ransom note. Every patient file, appointment record, and X-ray image
+            on the network was encrypted. Instead of digital files, staff saw a
+            message demanding payment in cryptocurrency for the decryption key.
+          </p>
 
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="images/mask-group-68333233c395d.webp"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          Securing <span class="italic-text">Healthcare</span> in Nigeria:
-          Protecting Patients in the
-          <span class="italic-text-header">Digital</span> Age.
-        </h3>
-        <p class="text-gray-600">May 26, 2025</p>
-        <p class="mt-4 text-gray-600">
-          Explore how Nigeria’s healthcare sector is becoming a prime target for
-          cybercriminals amidst the shift to digital systems.
-        </p>
-        <a
-          href="blogs/securing-healthcare.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
+          <p class="mt-4">
+            Emergency wards were on high alert. The head nurse in the ICU
+            realized monitors and infusion pumps still worked, but the patient
+            charts on screen were inaccessible. In the operating theater, a
+            surgeon’s request for the latest blood test results returned an
+            error. With no electronic lab system, doctors had to scramble. A
+            porter ran to the lab to fetch paper results manually, wasting
+            precious minutes.
+          </p>
+
+          <h3 class="mt-6 text-xl font-semibold text-gray-800">
+            Roll-Out of Paper Charts
+          </h3>
+          <p>
+            Because the hospital had no recent full backups, they couldn’t
+            restore systems quickly. The CMAC announced: “We’re going back to
+            pen and paper.” Staff in every department started writing by hand.
+            Patients began to queue in the waiting room. The pharmacy had to
+            manually check inventory. Appointments were cancelled by
+            mid-morning, and elective surgeries postponed.
+          </p>
+
+          <p class="mt-4">
+            By <strong>Wednesday</strong>, conditions were dire: IV drips still
+            flowed, but vital information did not.<br />
+            On <strong>Thursday</strong>, the administration finally called in
+            external help. <span class="italic-text-header">Clarensec</span>’s
+            incident response team arrived late Thursday night. By then, the
+            hospital had operated on paper for four days, as stated earlier:
+            “going back to paper is not a backup, it’s a breakdown” when EMRs
+            are locked.
+          </p>
+
+          <p class="mt-4">
+            Clarensec worked through the weekend to isolate the ransomware,
+            rebuild the network, and restore data from the only decent backup (a
+            weekend incremental tape) they found.
+          </p>
+
+          <h3 class="mt-6 text-xl font-semibold text-gray-800">
+            What Went Wrong
+          </h3>
+          <ul class="mt-2 space-y-2">
+            <li>
+              <strong>No tested incident response plan:</strong> Staff didn’t
+              know who should be in charge during a cyber-crisis, so initial
+              reactions were slow and disorganized.
+            </li>
+            <li>
+              <strong>Unreliable backups:</strong> A hard drive backup existed
+              but hadn’t run correctly for months.
+            </li>
+            <li>
+              <strong>Minimal network monitoring:</strong> The breach wasn’t
+              detected until it was too late.
+            </li>
+            <li>
+              <strong>Unclear roles:</strong> IT staff assumed clinical teams
+              would respond, and vice versa, leading to confusion and delays.
+            </li>
+          </ul>
+
+          <p class="mt-4">
+            In contrast, a well-prepared organization could have followed
+            guidelines: disconnect infected machines, notify key personnel, and
+            rebuild from clean backups. As security experts note, having a
+            practiced response plan with defined roles and communication
+            protocols is crucial for quick recovery.
+          </p>
+
+          <p class="mt-4">
+            In our story, lack of preparation turned a cyber incident into a
+            life-and-death crisis, as the WHO has warned can happen with
+            hospital ransomware attacks.
+          </p>
+
+          <h3 class="mt-6 text-xl font-semibold text-gray-800">
+            Key Takeaways
+          </h3>
+          <ul class="mt-2 space-y-2">
+            <li>
+              <strong>Don’t wait to set up backups:</strong> Make sure encrypted
+              copies of patient data are backed up offsite or in the cloud, and
+              regularly test restores. Having recent backups can cut recovery
+              time from days to hours.
+            </li>
+            <li>
+              <strong>Have an incident response plan:</strong> Define who does
+              what if an attack occurs. Drill the plan so everyone knows the
+              communication channel and roles. This keeps staff focused and
+              avoids chaos.
+            </li>
+            <li>
+              <strong>Train and communicate:</strong> All teams – medical, IT,
+              admin – must understand basic cyber hygiene and the response plan.
+              Cross-team drills help break down silos. In the story, better
+              communication between clinical staff and IT could have identified
+              the breach sooner.
+            </li>
+            <li>
+              <strong>Seek expert support:</strong> In a crisis, outside
+              specialists can restore operations faster.
+              <span class="italic-text-header">Clarensec</span> provides urgent
+              response services, as well as pre-attack services (risk
+              assessments, audits, tabletop exercises) to prepare hospitals.
+              Hospitals that worked with Clarensec after this incident have
+              since reported improved resilience.
+            </li>
+          </ul>
+
+          <p class="mt-4">
+            Cyber threats are a reality for every hospital today. By preparing
+            in advance – securing data, planning responses, training staff, and
+            leveraging expert help – healthcare teams can ensure that when
+            disaster strikes, patient care continues and trust is maintained.
+          </p>
+        </article>
+      </section>
+      <!-- SECTION  -->
+      <section
+        class="lg:flex-1 flex flex-col gap-8 my-8 lg:sticky lg:top-0 h-fit"
+      >
+        <h2 class="text-2xl font-bold text-center">Related Posts</h2>
+        <article class="bg-white custom-box-shadow p-3 rounded-xl">
+          <div class="h-60 rounded-xl">
+            <img
+              src="/images/man-holding-smartphone-with-apartment-buildings-hologram.jpg"
+              width="313"
+              height="205"
+              class="w-full h-full rounded-xl"
+              alt=""
+            />
+          </div>
+          <h3 class="text-xl font-semibold mt-2">
+            Starting Your
+            <span class="italic-text-header">Cybersecurity</span> Program: First
+            Steps for Hospitals
+          </h3>
+          <p class="text-gray-600">June 10, 2025</p>
+          <p class="mt-4 text-gray-600">
+            Healthcare data is extremely valuable to attackers. Studies note
+            that electronic patient records and protected health information
+            (PHI) are often more lucrative than other data. Yet...
+          </p>
+          <a
+            href="/blogs/Starting_Your_Cybersecurity_Program_First_Steps_for_Hospitals.html"
+            class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
+            >Read More</a
+          >
+        </article>
+        <article class="bg-white custom-box-shadow p-3 rounded-xl">
+          <div class="h-60 rounded-xl">
+            <img
+              src="/images/ground-up.jpg"
+              width="313"
+              height="205"
+              class="w-full h-full rounded-xl"
+              alt=""
+            />
+          </div>
+          <h3 class="text-xl font-semibold mt-2">
+            A Hospital’s Journey: Building
+            <span class="italic-text-header">Cybersecurity</span> from the
+            Ground Up
+          </h3>
+          <p class="text-gray-600">June 5, 2025</p>
+          <p class="mt-4 text-gray-600">
+            In May 2025, the management of a private hospital in South-West
+            Nigeria received a wake-up call. A dismissed staff member was caught
+            remotely ...
+          </p>
+          <a
+            href="/blogs/cybersecurity-ground-up.html"
+            class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
+            >Read More</a
+          >
+        </article>
+        <article class="bg-white custom-box-shadow p-3 rounded-xl">
+          <div class="h-60 rounded-xl">
+            <img
+              src="/images/ndpc-all.jpg"
+              width="313"
+              height="205"
+              class="w-full h-full rounded-xl"
+              alt=""
+            />
+          </div>
+          <h3 class="text-xl font-semibold mt-2">
+            Partnering for Patient Privacy:
+            <span class="italic-text-header">Clarensec’s</span> Visit to the
+            NDPC
+          </h3>
+          <p class="text-gray-600">May 31, 2025</p>
+          <p class="mt-4 text-gray-600">
+            On April 25, 2025, a delegation from Clarensec paid a courtesy visit
+            to the Nigerian Data Protection Commission (NDPC) to share our
+            vision for improving the security of health information systems
+            across Nigeria.
+          </p>
+          <a
+            href="/blogs/partnering-for-privacy.html"
+            class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
+            >Read More</a
+          >
+        </article>
+      </section>
     </main>
-
     <footer
       class="bg-[var(--primary-color)] text-white py-6 md:py-20 md:m-4 rounded-2xl relative overflow-hidden"
     >
       <img
-        src="images/footer icon.webp"
+        src="/images/footer icon.webp"
         class="absolute right-10 top-10 opacity-20"
         height="300"
         width="300"
@@ -373,8 +436,8 @@
         <!-- FOOTER FIRST SECTION  -->
         <div class="md:flex-3">
           <!-- FOOTER LOGO -->
-          <a href="index.html" class="mb-8 block"
-            ><img src="images/logo/logo-white.webp" width="100" alt=""
+          <a href="/index.html" class="mb-8 block"
+            ><img src="/images/logo/logo-white.webp" width="100" alt=""
           /></a>
 
           <p class="mb-6 md:w-100">
@@ -485,8 +548,9 @@
           <ul class="space-y-2">
             <li class="font-semibold mb-4">Quick Links</li>
             <li class="index.html"><a href="/">Home</a></li>
-            <li class="about.html"><a href="about.html">About Us</a></li>
-            <li class="services.html"><a href="services.html">Services</a></li>
+            <li class="about.html"><a href="/about.html">About Us</a></li>
+            <li class="services.html"><a href="/services.html">Services</a></li>
+            <li class="blog.html"><a href="/blog.html">Blog</a></li>
           </ul>
         </div>
         <!-- FOOTER CONTACT LINKS  -->
@@ -504,7 +568,7 @@
             </li>
           </ul>
           <a
-            href="contact.html"
+            href="/contact.html"
             class="mt-4 text-sm p-3 bg-white text-[var(--accent-color)] rounded-3xl inline-flex items-center justify-center gap-2"
           >
             <span>Request a Consultation</span>
