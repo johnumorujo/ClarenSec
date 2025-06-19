@@ -1,1 +1,0 @@
-@tailwindcss/cli -i ./css/working.css -o ./css/main.css --watch
