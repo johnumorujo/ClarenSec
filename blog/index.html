@@ -193,223 +193,94 @@
         Explore expert articles, news and practical tips on securing digital
         health systems.
       </p>
+      <!-- SEARCH BLOG SEARCH BAR  -->
+      <form
+        action=""
+        class="flex justify-center mx-auto items-center mt-8 w-[100%] md:w-150 p-2 rounded-xl bg-gray-100 focus-within:outline-2 focus-within:outline-blue-400"
+      >
+        <button type="button" id="search-button" class="px-2 cursor-pointer">
+          <svg
+            width="25"
+            height="25"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z"
+                stroke="#000000"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </g>
+          </svg>
+        </button>
+
+        <input
+          type="search"
+          name=""
+          id="search-bar"
+          class="w-full p-2 focus:outline-0"
+        />
+      </form>
     </header>
 
-    <main class="grid grid-cols-1 md:grid-cols-3 gap-8 my-8 container-custom">
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/man-holding-smartphone-with-apartment-buildings-hologram.jpg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          Starting Your
-          <span class="italic-text-header">Cybersecurity</span> Program: First
-          Steps for Hospitals
-        </h3>
-        <p class="text-gray-600">June 10, 2025</p>
-        <p class="mt-4 text-gray-600">
-          Healthcare data is extremely valuable to attackers. Studies note that
-          electronic patient records and protected health information (PHI) are
-          often more lucrative than other data. Yet...
-        </p>
-        <a
-          href="/blog/Starting-Your-Cybersecurity-Program-First-Steps-for-Hospitals.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
+    <!-- CHANGES MADE STARTS HERE  -->
+    <main class="my-8 container-custom">
+      <section
+        class="min-h-200 grid grid-cols-1 md:grid-cols-3 gap-8 [&>article]:h-max"
+        id="landing-page-blog-posts"
+      >
+        <template id="blog-template">
+          <article
+            class="article bg-white min-w-85 shrin custom-box-shadow p-3 rounded-xl snap-start"
+          >
+            <div class="h-60 rounded-xl">
+              <img
+                class="blog-post-image w-full h-full rounded-xl object-cover overflow-clip"
+                width="313"
+                height="205"
+                alt=""
+              />
+            </div>
+            <h3 class="blog-post-title text-xl font-semibold mt-2"></h3>
+            <p class="blog-post-date text-gray-600"></p>
+            <p class="blog-post-description mt-4 text-gray-600"></p>
+            <a
+              href=""
+              class="blog-post-link text-[var(--accent-color)] mt-4 inline-block font-semibold"
+              >Read More</a
+            >
+          </article>
+        </template>
+      </section>
+      <div class="flex flex-wrap justify-center align-center gap-2 mt-8">
+        <button
+          id="prev"
+          class="py-2 px-4 bg-gray-50 rounded-md cursor-pointer hover:bg-[var(--accent-color)] hover:text-white transition-colors duration-300"
         >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/regulations.jpg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          <span class="italic-text-header">Regulations</span> and
-          <span class="italic-text-header">Standards</span>: NDPA, NHAct &
-          Beyond
-        </h3>
-        <p class="text-gray-600">June 17, 2025</p>
-        <p class="mt-4 text-gray-600">
-          In Nigeria’s hospitals, protecting patient data is not just good
-          practice; it’s a legal requirement. The Data Protection Act of 2023,
-          and the National Health Act...
-        </p>
-        <a
-          href="/blog/Regulations-and-standards-NDPA.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
+          Prev
+        </button>
+        <div
+          id="page-numbers"
+          class="[&>button]:cursor-pointer [&>button]:bg-gray-50 [&>button]:p-2 [&>button]:rounded-sm [&>button]:aspect-square [&>button]:w-10 [&>button]:hover:not-[.active]:bg-[var(--accent-color)] [&>button]:hover:not-[.active]:text-white [&>button.active]:bg-[var(--accent-color)] [&>button.active]:text-white [&>button]:transition-colors [&>button]:duration-300 flex flex-wrap justify-center align-center gap-2"
+        ></div>
+        <div
+          id="next"
+          class="py-2 px-4 bg-gray-50 rounded-md cursor-pointer hover:bg-[var(--accent-color)] hover:text-white transition-colors duration-300"
         >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/ransomware.svg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
+          Next
         </div>
-        <h3 class="text-xl font-semibold mt-2">
-          When Disaster Strikes: An
-          <span class="italic-text-header">Incident Response</span> Story
-        </h3>
-        <p class="text-gray-600">June 12, 2025</p>
-        <p class="mt-4 text-gray-600">
-          <strong>Monday Morning:</strong> At 'Oto' General Hospital in Ibadan,
-          the new week started like any other. Doctors reviewed schedules,
-          nurses updated charts, and lab technicians logged in...
-        </p>
-        <a
-          href="/blog/an-incident-response-story.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/data-breach.png"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          Learning from a <span class="italic-text-header">Breach</span>: Lagos
-          Hospital Data Loss
-        </h3>
-        <p class="text-gray-600">June 19, 2025</p>
-        <p class="mt-4 text-gray-600">
-          A real-world look at how a Lagos hospital lost sensitive patient data,
-          and the vital lessons every healthcare provider in Nigeria can learn
-          from it.
-        </p>
-        <a
-          href="/blog/learning-from-a-breach.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/ground-up.jpg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          A Hospital’s Journey: Building
-          <span class="italic-text-header">Cybersecurity</span> from the Ground
-          Up
-        </h3>
-        <p class="text-gray-600">June 5, 2025</p>
-        <p class="mt-4 text-gray-600">
-          In May 2025, the management of a private hospital in South-West
-          Nigeria received a wake-up call. A dismissed staff member was caught
-          remotely ...
-        </p>
-        <a
-          href="/blog/cybersecurity-ground-up.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/ndpc-all.jpg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          Partnering for Patient Privacy:
-          <span class="italic-text-header">Clarensec’s</span> Visit to the NDPC
-        </h3>
-        <p class="text-gray-600">May 31, 2025</p>
-        <p class="mt-4 text-gray-600">
-          On April 25, 2025, a delegation from Clarensec paid a courtesy visit
-          to the Nigerian Data Protection Commission (NDPC) to share our vision
-          for improving the security of health information systems ...
-        </p>
-        <a
-          href="/blog/partnering-for-privacy.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/doctor-wearing-glove.jpg"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          Why <span class="italic-text-header">Cybersecurity</span> Matters in
-          Nigerian Hospitals
-        </h3>
-        <p class="text-gray-600">June 3, 2025</p>
-        <p class="mt-4 text-gray-600">
-          As Nigeria’s healthcare system becomes increasingly digital, hospitals
-          across the country are adopting Electronic Medical Records (EMRs),
-          telemedicine platforms...
-        </p>
-        <a
-          href="/blog/why-security-matters.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
-
-      <article class="bg-white custom-box-shadow p-3 rounded-xl">
-        <div class="h-60 rounded-xl">
-          <img
-            src="/images/mask-group-68333233c395d.webp"
-            width="313"
-            height="205"
-            class="w-full h-full rounded-xl"
-            alt=""
-          />
-        </div>
-        <h3 class="text-xl font-semibold mt-2">
-          Securing <span class="italic-text">Healthcare</span> in Nigeria:
-          Protecting Patients in the
-          <span class="italic-text-header">Digital</span> Age.
-        </h3>
-        <p class="text-gray-600">May 26, 2025</p>
-        <p class="mt-4 text-gray-600">
-          Explore how Nigeria’s healthcare sector is becoming a prime target for
-          cybercriminals amidst the shift to digital systems.
-        </p>
-        <a
-          href="/blog/securing-healthcare.html"
-          class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-          >Read More</a
-        >
-      </article>
+      </div>
     </main>
-
     <footer
       class="bg-[var(--primary-color)] text-white py-6 md:py-20 md:m-4 rounded-2xl relative overflow-hidden"
     >
