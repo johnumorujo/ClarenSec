@@ -62,5 +62,13 @@
         "description": "Healthcare data is extremely valuable to attackers. Studies note that electronic patient records and protected health information (PHI) are often more lucrative than other data. Yet...",
         "link": "/blog/Starting-Your-Cybersecurity-Program-First-Steps-for-Hospitals.html",
         "date": "June 10, 2025"
+    },
+    {
+        "id": 9,
+        "image": "/images/security aware.jpg",
+        "title": "Building a Security-Aware Culture: Training and Awareness",
+        "description": "In a federal hospital in Enugu, an unsuspecting pharmacist clicked an attachment titled “New Staff Payroll Update.” It looked official, came from what appeared to be an internal email...",
+        "link": "/blog/building-a-security-culture.html",
+        "date": "June 24, 2025"
     }
 ]
