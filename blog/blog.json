@@ -70,5 +70,13 @@
         "description": "In a federal hospital in Enugu, an unsuspecting pharmacist clicked an attachment titled “New Staff Payroll Update.” It looked official, came from what appeared to be an internal email...",
         "link": "/blog/building-a-security-culture.html",
         "date": "June 24, 2025"
+    },
+    {
+        "id": 10,
+        "image": "/images/nurse defender.jpg",
+        "title": "From Caregiver to Defender: A Nurse’s Perspective",
+        "description": "Cybersecurity isn’t just for IT teams. In this personal narrative, a Nigerian nurse reflects on how frontline healthcare workers can help defend patient data, spot threats, and ...",
+        "link": "/blog/caregiver-to-defender.html",
+        "date": "June 26, 2025"
     }
 ]
