@@ -78,5 +78,13 @@
         "description": "Cybersecurity isn’t just for IT teams. In this personal narrative, a Nigerian nurse reflects on how frontline healthcare workers can help defend patient data, spot threats, and ...",
         "link": "/blog/caregiver-to-defender.html",
         "date": "June 26, 2025"
+    },
+    {
+        "id": 11,
+        "image": "/images/EMR.jpg",
+        "title": "So 1234 Is Your EMR Password? Don’t Lose Your License.",
+        "description": "Using weak passwords, posting patient data on WhatsApp, simple habits can lead to serious data breaches in hospitals. This post explores common EMR mistakes by doctors and ...",
+        "link": "/blog/password_1234.html",
+        "date": "July 1, 2025"
     }
 ]
