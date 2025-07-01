@@ -86,5 +86,13 @@
         "description": "Using weak passwords, posting patient data on WhatsApp, simple habits can lead to serious data breaches in hospitals. This post explores common EMR mistakes by doctors and ...",
         "link": "/blog/password-1234.html",
         "date": "July 1, 2025"
+    },
+    {
+        "id": 12,
+        "image": "/images/AV bypass.webp",
+        "title": "Antivirus Alone Won’t Protect Your Hospital: Here’s Why",
+        "description": "Many hospitals still rely on antivirus software as their main line of defense, but cyberattacks have evolved. This blog explains why Nigerian healthcare institutions require ...",
+        "link": "/blog/antivirus-is-not-enough.html",
+        "date": "July 3, 2025"
     }
 ]
