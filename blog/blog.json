@@ -94,5 +94,13 @@
         "description": "Many hospitals still rely on antivirus software as their main line of defense, but cyberattacks have evolved. This blog explains why Nigerian healthcare institutions require ...",
         "link": "/blog/antivirus-is-not-enough.html",
         "date": "July 3, 2025"
+    },
+    {
+        "id": 13,
+        "image": "/images/phishing.jpg",
+        "title": "Anatomy of a Phishing Attack in Healthcare",
+        "description": "Discover the step-by-step breakdown of a phishing attack in healthcare, explored from the initial bait to system compromise, and learn how hospitals can defend against this...",
+        "link": "/blog/anatomy-of-phishing.html",
+        "date": "July 8, 2025"
     }
 ]
