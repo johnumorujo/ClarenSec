@@ -26,7 +26,8 @@ body {
     background-position: 400px top;
 }
 .hero-image {
-    background-image: linear-gradient(to right, transparent, #47186300, #47186366), url("../images/Frame 5635.webp");
+    background-image: linear-gradient(to right, transparent, #47186300, #47186366),
+        url("../images/Frame 5635.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -71,6 +72,7 @@ body {
 .custom-box-shadow {
     box-shadow: 0px 6px 10.6px 0px #00000012;
 }
+
 /* animations.css */
 
 @keyframes slide-up-fade {
@@ -123,6 +125,6 @@ body {
 .slide-right-fade {
     animation: slide-right-fade 0.6s ease-out forwards;
 }
-.smaller{
+.smaller {
     font-size: 9.5px;
-  }
+}
