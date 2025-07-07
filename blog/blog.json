@@ -102,5 +102,13 @@
         "description": "Discover the step-by-step breakdown of a phishing attack in healthcare, explored from the initial bait to system compromise, and learn how hospitals can defend against this...",
         "link": "/blog/anatomy-of-phishing.html",
         "date": "July 8, 2025"
+    },
+    {
+        "id": 14,
+        "image": "/images/hooked.avif",
+        "title": "Hooked: A Phishing Incident",
+        "description": "Hooked reveals the chain of events in a real-world phishing incident, exposing how a single email bypassed defenses and triggered a compromise, and what healthcare organizations can learn from it...",
+        "link": "/blog/hooked.html",
+        "date": "July 10, 2025"
     }
 ]
