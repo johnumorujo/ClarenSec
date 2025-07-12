@@ -83,11 +83,14 @@ function countUpUnified(el, duration = 1000, decimals = 2) {
 }
 
 // === NATIVE SHARE & COPY ===
+const rawTitle = document.body.querySelector("h1")?.innerText || "";
+const cleanTitle = rawTitle.replace(/\s*\n\s*/g, " ").trim();
+
 const shareData = {
-    title: document.title,
-    text: document.body.querySelector("h1")?.innerText || "",
-    url: window.location.href,
-}
+  title: document.title,
+  text: cleanTitle,
+  url: window.location.href,
+};
 
 document.getElementById("shareButton")?.addEventListener("click", async () => {
     if (navigator.share) await navigator.share(shareData)
