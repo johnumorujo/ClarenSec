@@ -81,11 +81,11 @@
     },
     {
         "id": 11,
-        "image": "/images/EMR.jpg",
-        "title": "So 1234 Is Your EMR Password? Don’t Lose Your License.",
-        "description": "Using weak passwords, posting patient data on WhatsApp, simple habits can lead to serious data breaches in hospitals. This post explores common EMR mistakes by doctors and ...",
-        "link": "/blog/password-1234.html",
-        "date": "July 1, 2025"
+        "image": "/images/hooked.avif",
+        "title": "Hooked: A Phishing Incident",
+        "description": "Hooked reveals the chain of events in a real-world phishing incident, exposing how a single email bypassed defenses and triggered a compromise, and what healthcare organizations can learn from it...",
+        "link": "/blog/hooked.html",
+        "date": "July 10, 2025"
     },
     {
         "id": 12,
@@ -105,10 +105,18 @@
     },
     {
         "id": 14,
-        "image": "/images/hooked.avif",
-        "title": "Hooked: A Phishing Incident",
-        "description": "Hooked reveals the chain of events in a real-world phishing incident, exposing how a single email bypassed defenses and triggered a compromise, and what healthcare organizations can learn from it...",
-        "link": "/blog/hooked.html",
-        "date": "July 10, 2025"
+        "image": "/images/EMR.jpg",
+        "title": "So 1234 Is Your EMR Password? Don’t Lose Your License.",
+        "description": "Using weak passwords, posting patient data on WhatsApp, simple habits can lead to serious data breaches in hospitals. This post explores common EMR mistakes by doctors and ...",
+        "link": "/blog/password-1234.html",
+        "date": "July 1, 2025"
+    },
+    {
+        "id": 15,
+        "image": "/images/stop.jpg",
+        "title": "Spot, Stop, Report: How to Defend Your Hospital Against Phishing",
+        "description": "Phishing attacks are a growing threat to hospitals in West Africa. This guide breaks down practical steps for staff and IT teams to spot phishing attempts, stop attacks before ...",
+        "link": "/blog/spot-stop-report.html",
+        "date": "July 15, 2025"
     }
 ]
