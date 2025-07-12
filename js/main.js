@@ -85,11 +85,12 @@ function countUpUnified(el, duration = 1000, decimals = 2) {
 // === NATIVE SHARE & COPY ===
 const rawTitle = document.body.querySelector("h1")?.innerText || "";
 const cleanTitle = rawTitle.replace(/\s*\n\s*/g, " ").trim();
+const fullText = `${cleanTitle}\n${window.location.href}`;
 
 const shareData = {
   title: document.title,
-  text: cleanTitle,
-  url: window.location.href,
+  text: fullText,
+  // intentionally omit url to allow line break in text
 };
 
 document.getElementById("shareButton")?.addEventListener("click", async () => {
