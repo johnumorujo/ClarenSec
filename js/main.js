@@ -88,7 +88,7 @@ const cleanTitle = rawTitle.replace(/\s*\n\s*/g, " ").trim();
 
 const shareData = {
   title: document.title,
-  text: `${cleanTitle}\n${window.location.href}`,
+  text: cleanTitle,
   url: window.location.href,
 };
 
