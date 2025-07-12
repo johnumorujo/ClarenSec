@@ -85,7 +85,7 @@ function countUpUnified(el, duration = 1000, decimals = 2) {
 // === NATIVE SHARE & COPY ===
 const shareData = {
     title: document.title,
-    text: document.body.querySelector("h1")?.textContent || "Check this out!",
+    text: document.body.querySelector("h1")?.innerText || "",
     url: window.location.href,
 }
 
