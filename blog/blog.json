@@ -118,5 +118,13 @@
         "description": "Phishing attacks are a growing threat to hospitals in West Africa. This guide breaks down practical steps for staff and IT teams to spot phishing attempts, stop attacks before ...",
         "link": "/blog/spot-stop-report.html",
         "date": "July 15, 2025"
+    },
+    {
+        "id": 16,
+        "image": "/images/spear phishing.jpg",
+        "title": "Inside a Spear-Phishing Attack",
+        "description": "Spear-phishing is targeted deception designed to trick specific staff and compromise an organization's data. In this post, we break down a real spear-phishing incident in a West African...",
+        "link": "/blog/spear-phishing.html",
+        "date": "July 17, 2025"
     }
 ]
