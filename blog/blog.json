@@ -126,5 +126,13 @@
         "description": "Spear-phishing is targeted deception designed to trick specific staff and compromise an organization's data. In this post, we break down a real spear-phishing incident in a West African...",
         "link": "/blog/spear-phishing.html",
         "date": "July 17, 2025"
+    },
+    {
+        "id": 17,
+        "image": "/images/social engineering.jpg",
+        "title": "Social Engineering Prevention for Healthcare Institutions.",
+        "description": "Social engineering is one of the biggest threats to patient data. This post explains how healthcare institutions can protect sensitive information by educating staff, enforcing...",
+        "link": "/blog/social-engineering-prevention.html",
+        "date": "July 22, 2025"
     }
 ]
