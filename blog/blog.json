@@ -134,5 +134,13 @@
         "description": "Social engineering is one of the biggest threats to patient data. This post explains how healthcare institutions can protect sensitive information by educating staff, enforcing...",
         "link": "/blog/social-engineering-prevention.html",
         "date": "July 22, 2025"
+    },
+    {
+        "id": 18,
+        "image": "/images/security training.jpg",
+        "title": "Cultivating Vigilance: Training Programs that Work",
+        "description": "Strong cybersecurity starts with people. This post explores practical training programs that build vigilance in healthcare teams, turning every staff member into a defender of...",
+        "link": "/blog/awareness-training.html",
+        "date": "July 24, 2025"
     }
 ]
