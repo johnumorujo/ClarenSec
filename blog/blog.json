@@ -3,7 +3,7 @@
         "id": 1,
         "image": "/images/mask-group-68333233c395d.webp",
         "title": "Securing healthcare in Nigeria: Protecting Patients in the Digital Age.",
-        "description": "Explore how Nigeria’s healthcare sector is becoming a prime target for cybercriminals amidst the shift to digital systems.",
+        "description": "Explore how Nigeria's healthcare sector is becoming a prime target for cybercriminals amidst the shift to digital systems.",
         "link": "/blog/securing-healthcare.html",
         "date": "May 26, 2025"
     },
@@ -11,14 +11,14 @@
         "id": 2,
         "image": "/images/doctor-wearing-glove.jpg",
         "title": "Why Cybersecurity Matters in Nigerian Hospitals",
-        "description": "As Nigeria’s healthcare system becomes increasingly digital, hospitals across the country are adopting Electronic Medical Records (EMRs), telemedicine platforms... ",
+        "description": "As Nigeria's healthcare system becomes increasingly digital, hospitals across the country are adopting Electronic Medical Records (EMRs), telemedicine platforms... ",
         "link": "/blog/why-security-matters.html",
         "date": "June 3, 2025"
     },
     {
         "id": 3,
         "image": "/images/ndpc-all.jpg",
-        "title": " Partnering for Patient Privacy: Clarensec’s Visit to the NDPC",
+        "title": " Partnering for Patient Privacy: Clarensec's Visit to the NDPC",
         "description": "On April 25, 2025, a delegation from Clarensec paid a courtesy visit to the Nigerian Data Protection Commission (NDPC) to share our vision for improving the security of health...",
         "link": "/blog/partnering-for-privacy.html",
         "date": "May 31, 2025"
@@ -26,7 +26,7 @@
     {
         "id": 4,
         "image": "/images/ground-up.jpg",
-        "title": " A Hospital’s Journey: Building Cybersecurity from the Ground Up",
+        "title": " A Hospital's Journey: Building Cybersecurity from the Ground Up",
         "description": "In May 2025, the management of a private hospital in South-West Nigeria received a wake-up call. A  dismissed staff member was caught remotely ...",
         "link": "/blog/cybersecurity-ground-up.html",
         "date": "June 5, 2025"
@@ -51,7 +51,7 @@
         "id": 7,
         "image": "/images/regulations.jpg",
         "title": " Regulations and Standards: NDPA, NHAct & Beyond",
-        "description": "In Nigeria’s hospitals, protecting patient data is not just good practice; it’s a legal requirement. The Data Protection Act of 2023, and the National Health Act...",
+        "description": "In Nigeria's hospitals, protecting patient data is not just good practice; it's a legal requirement. The Data Protection Act of 2023, and the National Health Act...",
         "link": "/blog/Regulations-and-standards-NDPA.html",
         "date": "June 17, 2025"
     },
@@ -74,8 +74,8 @@
     {
         "id": 10,
         "image": "/images/nurse defender.jpg",
-        "title": "From Caregiver to Defender: A Nurse’s Perspective",
-        "description": "Cybersecurity isn’t just for IT teams. In this personal narrative, a Nigerian nurse reflects on how frontline healthcare workers can help defend patient data, spot threats, and ...",
+        "title": "From Caregiver to Defender: A Nurse's Perspective",
+        "description": "Cybersecurity isn't just for IT teams. In this personal narrative, a Nigerian nurse reflects on how frontline healthcare workers can help defend patient data, spot threats, and ...",
         "link": "/blog/caregiver-to-defender.html",
         "date": "June 26, 2025"
     },
@@ -90,7 +90,7 @@
     {
         "id": 12,
         "image": "/images/AV bypass.webp",
-        "title": "Antivirus Alone Won’t Protect Your Hospital: Here’s Why",
+        "title": "Antivirus Alone Won't Protect Your Hospital: Here's Why",
         "description": "Many hospitals still rely on antivirus software as their main line of defense, but cyberattacks have evolved. This blog explains why Nigerian healthcare institutions require ...",
         "link": "/blog/antivirus-is-not-enough.html",
         "date": "July 3, 2025"
@@ -106,7 +106,7 @@
     {
         "id": 14,
         "image": "/images/EMR.jpg",
-        "title": "So 1234 Is Your EMR Password? Don’t Lose Your License.",
+        "title": "So 1234 Is Your EMR Password? Don't Lose Your License.",
         "description": "Using weak passwords, posting patient data on WhatsApp, simple habits can lead to serious data breaches in hospitals. This post explores common EMR mistakes by doctors and ...",
         "link": "/blog/password-1234.html",
         "date": "July 1, 2025"
@@ -142,5 +142,13 @@
         "description": "Strong cybersecurity starts with people. This post explores practical training programs that build vigilance in healthcare teams, turning every staff member into a defender of...",
         "link": "/blog/awareness-training.html",
         "date": "July 24, 2025"
+    },
+    {
+        "id": 19,
+        "image": "/images/locked.jpg",
+        "title": "Understanding Ransomware: A Constant Threat in Healthcare.",
+        "description": "Ransomware attacks are crippling hospitals across Nigeria and West Africa, locking critical patient data and disrupting care. Learn how these attacks happen, why healthcare is a...",
+        "link": "/blog/understanding-ransomware.html",
+        "date": "July 29, 2025"
     }
 ]
