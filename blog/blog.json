@@ -105,11 +105,11 @@
     },
     {
         "id": 14,
-        "image": "/images/EMR.jpg",
-        "title": "So 1234 Is Your EMR Password? Don't Lose Your License.",
-        "description": "Using weak passwords, posting patient data on WhatsApp, simple habits can lead to serious data breaches in hospitals. This post explores common EMR mistakes by doctors and ...",
-        "link": "/blog/password-1234.html",
-        "date": "July 1, 2025"
+        "image": "/images/security training.jpg",
+        "title": "Cultivating Vigilance: Training Programs that Work",
+        "description": "Strong cybersecurity starts with people. This post explores practical training programs that build vigilance in healthcare teams, turning every staff member into a defender of...",
+        "link": "/blog/awareness-training.html",
+        "date": "July 24, 2025"
     },
     {
         "id": 15,
@@ -137,11 +137,11 @@
     },
     {
         "id": 18,
-        "image": "/images/security training.jpg",
-        "title": "Cultivating Vigilance: Training Programs that Work",
-        "description": "Strong cybersecurity starts with people. This post explores practical training programs that build vigilance in healthcare teams, turning every staff member into a defender of...",
-        "link": "/blog/awareness-training.html",
-        "date": "July 24, 2025"
+        "image": "/images/EMR.jpg",
+        "title": "So 1234 Is Your EMR Password? Don't Lose Your License.",
+        "description": "Using weak passwords, posting patient data on WhatsApp, simple habits can lead to serious data breaches in hospitals. This post explores common EMR mistakes by doctors and ...",
+        "link": "/blog/password-1234.html",
+        "date": "July 1, 2025"
     },
     {
         "id": 19,
@@ -150,5 +150,13 @@
         "description": "Ransomware attacks are crippling hospitals across Nigeria and West Africa, locking critical patient data and disrupting care. Learn how these attacks happen, why healthcare is a...",
         "link": "/blog/understanding-ransomware.html",
         "date": "July 29, 2025"
+    },
+    {
+        "id": 20,
+        "image": "/images/preventingmalware.jpg",
+        "title": "A Beginner's Guide to Preventing Malware in Hospital Systems",
+        "description": "Malware can disrupt care and compromise patient data in African hospitals. Learn simple, strategic steps your facility can take to stay protected....",
+        "link": "/blog/preventing-malware.html",
+        "date": "August 7, 2025"
     }
 ]
