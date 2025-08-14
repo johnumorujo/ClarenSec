@@ -158,5 +158,14 @@
         "description": "Malware can disrupt care and compromise patient data in African hospitals. Learn simple, strategic steps your facility can take to stay protected....",
         "link": "/blog/preventing-malware.html",
         "date": "August 7, 2025"
+    },
+    {
+        "id": 21,
+        "image": "/images/ransomwareplaybook.jpg",
+        "title": "Healthcare Ransomware Playbook: A Practical Guide to Recovery",
+        "description": "This guide walks healthcare institutions through practical ransomware defense and recovery strategies, from early detection to system restoration. Learn how to protect sensitive ....",
+        "link": "/blog/ransomware-playbook.html",
+        "date": "August 14th, 2025"
     }
 ]
+
