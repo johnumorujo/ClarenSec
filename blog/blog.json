@@ -174,6 +174,15 @@
         "description": "Learn why backups and disaster recovery are essential for hospitals to withstand cyberattacks and system failures while keeping patient services uninterrupted...",
         "link": "/blog/disaster-recovery.html",
         "date": "August 21st, 2025"
+    },
+    {
+        "id": 23,
+        "image": "/images/interview.jpg",
+        "title": "Lessons from a Ransomware Attack",
+        "description": "A reflective Q&A with a Nigerian hospital IT director on surviving a ransomware attack. Practical lessons on backups, staff training, and response planning for healthcare leaders....",
+        "link": "/blog/lessons-from-a-ransomware.html",
+        "date": "August 28th, 2025"
     }
+
 ]
 
