@@ -190,6 +190,14 @@
         "description": "An overview of Nigeria's data protection landscape, focusing on the NDPA and National Health Act, and their role in safeguarding sensitive health information...",
         "link": "/blog/data-protection-laws.html",
         "date": "September 4, 2025"
+    },
+    {
+        "id": 25,
+        "image": "/images/privacy.jpg",
+        "title": "Designing Privacy into Healthcare Systems",
+        "description": "How Nigerian hospitals can embed privacy protections directly into their healthcare systems, ensuring patient trust and data security from the ground up...",
+        "link": "/blog/privacy-by-design.html",
+        "date": "September 11, 2025"
     }
 ]
 
