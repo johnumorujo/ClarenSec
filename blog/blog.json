@@ -198,6 +198,14 @@
         "description": "How Nigerian hospitals can embed privacy protections directly into their healthcare systems, ensuring patient trust and data security from the ground up...",
         "link": "/blog/privacy-by-design.html",
         "date": "September 11, 2025"
+    },
+    {
+        "id": 26,
+        "image": "/images/encrypted.jpg",
+        "title": "Beyond Passwords: Strong Encryption for Modern EMRs",
+        "description": "Learn why Nigerian hospitals need more than just passwords to protect patient data. Discover how strong encryption for EMRs secures records in storage and in transit...",
+        "link": "/blog/beyond passwords.html",
+        "date": "September 18, 2025"
     }
 ]
 
