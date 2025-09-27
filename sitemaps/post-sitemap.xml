@@ -157,4 +157,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  </url>
+    <url>
+    <loc>https://clarensec.com/blog/building-a-culture-of-privacy.html</loc>
+    <lastmod>2025-10-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

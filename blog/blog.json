@@ -206,6 +206,14 @@
         "description": "Learn why Nigerian hospitals need more than just passwords to protect patient data. Discover how strong encryption for EMRs secures records in storage and in transit...",
         "link": "/blog/beyond passwords.html",
         "date": "September 18, 2025"
+    },
+    {
+        "id": 27,
+        "image": "/images/building privacy.jpg",
+        "title": "Building a Culture of Privacy",
+        "description": "A near-miss showed one hospital that patient privacy is everyone's job. Discover how training every staff member built a culture of confidentiality and trust...",
+        "link": "/blog/building-a-culture-of-privacy.html",
+        "date": "October 2, 2025"
     }
 ]
 
