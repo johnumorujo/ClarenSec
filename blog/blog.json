@@ -214,6 +214,14 @@
         "description": "A near-miss showed one hospital that patient privacy is everyone's job. Discover how training every staff member built a culture of confidentiality and trust...",
         "link": "/blog/building-a-culture-of-privacy.html",
         "date": "October 2, 2025"
+    },
+    {
+        "id": 28,
+        "image": "/images/access control.jpg",
+        "title": "Principles of Access Control for Protecting Patient Records",
+        "description": "Access control in hospitals is tricky: doctors and nurses need shared access, but patient data must stay secure. Learn how to protect records without disrupting care...",
+        "link": "/blog/principles-of-access-control.html",
+        "date": "October 9, 2025"
     }
 ]
 
