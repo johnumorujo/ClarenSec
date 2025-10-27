@@ -222,6 +222,14 @@
         "description": "Access control in hospitals is tricky: doctors and nurses need shared access, but patient data must stay secure. Learn how to protect records without disrupting care...",
         "link": "/blog/principles-of-access-control.html",
         "date": "October 9, 2025"
+    },
+    {
+        "id": 29,
+        "image": "/images/managing user accounts.jpg",
+        "title": "Managing User Accounts and Permissions in EHR Systems",
+        "description": "Weak account management is one of the easiest ways attackers breach hospital systems. Learn how better password policies, access controls, and audits can strengthen...",
+        "link": "/blog/managing-user-accounts-in-EHR-systems.html",
+        "date": "October 30, 2025"
     }
 ]
 

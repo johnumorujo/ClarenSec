@@ -171,4 +171,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  </url>
+    </url>
+    <url>
+    <loc>https://clarensec.com/blog/managing-user-accounts-in-EHR-systems.html</loc>
+    <lastmod>2025-10-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
