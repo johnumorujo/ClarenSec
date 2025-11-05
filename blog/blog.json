@@ -230,6 +230,14 @@
         "description": "Weak account management is one of the easiest ways attackers breach hospital systems. Learn how better password policies, access controls, and audits can strengthen...",
         "link": "/blog/managing-user-accounts-in-EHR-systems.html",
         "date": "October 30, 2025"
+    },
+    {
+        "id": 30,
+        "image": "/images/vendor risk.jpg",
+        "title": "Managing Vendor Risk in Healthcare",
+        "description": "Third-party EMRs and cloud vendors can expose patient data if not managed. Learn how hospitals can verify encryption, enforce secure password practices, and audit vendors to protect patients and preserve trust...",
+        "link": "/blog/managing-vendor-risk-in-healthcare.html",
+        "date": "November 6, 2025"
     }
 ]
 

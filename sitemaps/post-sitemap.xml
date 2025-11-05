@@ -179,4 +179,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  </url>
+    </url>
+    <url>
+    <loc>https://clarensec.com/blog/managing-vendor-risk-in-healthcare.html</loc>
+    <lastmod>2025-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
