@@ -187,4 +187,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  </url>
+    <url>
+    <loc>https://clarensec.com/blog/supply-chain-attacks-in-healthcare.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>

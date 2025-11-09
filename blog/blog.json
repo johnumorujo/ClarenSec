@@ -238,6 +238,14 @@
         "description": "Third-party EMRs and cloud vendors can expose patient data if not managed. Learn how hospitals can verify encryption, enforce secure password practices, and audit vendors to protect patients and preserve trust...",
         "link": "/blog/managing-vendor-risk-in-healthcare.html",
         "date": "November 6, 2025"
+    },
+    {
+        "id": 31,
+        "image": "/images/supply-chain.jpg",
+        "title": "Supply Chain Attacks in Healthcare",
+        "description": "How supply-chain attacks reach hospitals through trusted vendors and updates, practical steps Nigerian hospitals can take to verify vendors, control updates, and protect patient care...",
+        "link": "/blog/supply-chain-attacks-in-healthcare.html",
+        "date": "November 13, 2025"
     }
 ]
 
