@@ -246,6 +246,14 @@
         "description": "How supply-chain attacks reach hospitals through trusted vendors and updates, practical steps Nigerian hospitals can take to verify vendors, control updates, and protect patient care...",
         "link": "/blog/supply-chain-attacks-in-healthcare.html",
         "date": "November 13, 2025"
+    },
+    {
+        "id": 32,
+        "image": "/images/checklist.avif",
+        "title": "Security Assessment Checklist for Third-Party Vendors",
+        "description": "Vet EMR & billing vendors with confidence: a clear checklist for encryption, MFA, backups, logging, audits and incident response to protect patient data...",
+        "link": "/blog/security assesment checlists for third-party vendors.html",
+        "date": "November 20, 2025"
     }
 ]
 
