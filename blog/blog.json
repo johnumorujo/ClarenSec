@@ -254,6 +254,13 @@
         "description": "Vet EMR & billing vendors with confidence: a clear checklist for encryption, MFA, backups, logging, audits and incident response to protect patient data...",
         "link": "/blog/security assesment checlists for third-party vendors.html",
         "date": "November 20, 2025"
+    },
+    {
+        "id": 33,
+        "image": "/images/one-team.avif",
+        "title": "One Team, One Mission: Protecting Patient Data in Nigeria's Hospitals",
+        "description": "Security isn’t just for IT: every hospital staff member has a role. From cleaners to clinicians to leadership, learn how teamwork protects patient data...",
+        "link": "/blog/One-Team-One-Mission.html",
+        "date": "November 27, 2025"
     }
 ]
-
