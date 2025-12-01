@@ -262,5 +262,13 @@
         "description": "Security isn’t just for IT: every hospital staff member has a role. From cleaners to clinicians to leadership, learn how teamwork protects patient data...",
         "link": "/blog/One-Team-One-Mission.html",
         "date": "November 27, 2025"
+    },
+    {
+        "id": 34,
+        "image": "/images/protecting health records.avif",
+        "title": "Protecting Health Records: Cybersecurity and Trust in West African Hospitals",
+        "description": "Strong cybersecurity builds patient confidence. Learn practical steps Nigerian hospitals can take to protect health records...",
+        "link": "/blog/Cybersecurity and Trust in West African Hospitals.html",
+        "date": "December 4, 2025"
     }
 ]

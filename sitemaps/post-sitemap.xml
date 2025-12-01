@@ -208,4 +208,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url> 
+  </url>
+    <url>
+    <loc>https://clarensec.com/blog/Cybersecurity and Trust in West African Hospitals.html</loc>
+    <lastmod>2025-12-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
