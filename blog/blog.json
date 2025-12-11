@@ -270,5 +270,13 @@
         "description": "Strong cybersecurity builds patient confidence. Learn practical steps Nigerian hospitals can take to protect health records...",
         "link": "/blog/Cybersecurity and Trust in West African Hospitals.html",
         "date": "December 4, 2025"
+    },
+    {
+        "id": 35,
+        "image": "/images/Hack Awards 2025.avif",
+        "title": "Hack Awards 2025: Healthcare Cyber Incidents & Lessons",
+        "description": "A recap of 2025's biggest healthcare cyber incidents; global ransomware hits and African data breaches like Kenya's M-TIBA hack, and the critical lessons hospitals must learn...",
+        "link": "/blog/Healthcare Hack Awards 2025.html",
+        "date": "December 11, 2025"
     }
 ]

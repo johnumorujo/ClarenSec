@@ -215,4 +215,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  </url>
+    <url>
+    <loc>https://clarensec.com/blog/Healthcare Hack Awards 2025.html</loc>
+    <lastmod>2025-12-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
