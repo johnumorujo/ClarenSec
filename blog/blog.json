@@ -278,5 +278,13 @@
         "description": "A recap of 2025's biggest healthcare cyber incidents; global ransomware hits and African data breaches like Kenya's M-TIBA hack, and the critical lessons hospitals must learn...",
         "link": "/blog/Healthcare Hack Awards 2025.html",
         "date": "December 11, 2025"
+    },
+    {
+        "id": 36,
+        "image": "/images/planning.avif",
+        "title": "Setting Cybersecurity Goals for 2026; Trends, Targets & Practical Steps To Protect Your Organization.",
+        "description": "Set clear, practical cybersecurity goals for 2026; covering policy, training, vendors, and testing, to help hospitals protect patient data...",
+        "link": "/blog/Setting Cybersecurity Goals",
+        "date": "Jan 8, 2026"
     }
 ]
