@@ -286,5 +286,13 @@
         "description": "Set clear, practical cybersecurity goals for 2026; covering policy, training, vendors, and testing, to help hospitals protect patient data...",
         "link": "/blog/Setting Cybersecurity Goals",
         "date": "Jan 8, 2026"
+    },
+    {
+        "id": 37,
+        "image": "/images/educating executives.jpg",
+        "title": "Educating Leadership: Cybersecurity for Executives.",
+        "description": "Practical guidance for hospital executives and board members to understand cyber risk, and ask the right questions that protect patients, operations, and institutional trust...",
+        "link": "/blog/cybersecurity for executives.html",
+        "date": "Jan 22, 2026"
     }
 ]

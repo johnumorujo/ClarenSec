@@ -229,4 +229,11 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  </url>
+    <url>
+    <loc>https://clarensec.com/blog/cybersecurity for executives.html</loc>
+    <lastmod>2026-01-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
