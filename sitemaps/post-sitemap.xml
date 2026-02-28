@@ -144,101 +144,93 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-    <url>
+  <url>
     <loc>https://clarensec.com/blog/privacy-by-design.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  </url>
-    <url>
-    <loc>https://clarensec.com/blog/beyond passwords.html</loc>
+  <url>
+    <loc>https://clarensec.com/blog/beyond%20passwords.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  </url>
-    <url>
+  <url>
     <loc>https://clarensec.com/blog/building-a-culture-of-privacy.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-    </url>
-    <url>
+  <url>
     <loc>https://clarensec.com/blog/principles-of-access-control.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  </url>
-    </url>
-    <url>
+  <url>
     <loc>https://clarensec.com/blog/managing-user-accounts-in-EHR-systems.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  </url>
-    </url>
-    <url>
+  <url>
     <loc>https://clarensec.com/blog/managing-vendor-risk-in-healthcare.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  </url>
-    <url>
+  <url>
     <loc>https://clarensec.com/blog/supply-chain-attacks-in-healthcare.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  </url>
-    <url>
-    <loc>https://clarensec.com/blog/security assesment checlists for third-party vendors.html</loc>
+  <url>
+    <loc>https://clarensec.com/blog/security%20assesment%20checlists%20for%20third-party%20vendors.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url> 
   </url>
-    <url>
+  <url>
     <loc>https://clarensec.com/blog/One-Team-One-Mission.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
-  </url> 
   </url>
-    <url>
-    <loc>https://clarensec.com/blog/Cybersecurity and Trust in West African Hospitals.html</loc>
+  <url>
+    <loc>https://clarensec.com/blog/Cybersecurity%20and%20Trust%20in%20West%20African%20Hospitals.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  </url>
-    <url>
-    <loc>https://clarensec.com/blog/Healthcare Hack Awards 2025.html</loc>
+  <url>
+    <loc>https://clarensec.com/blog/Healthcare%20Hack%20Awards%202025.html</loc>
     <lastmod>2026-01-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  </url>
-    <url>
-    <loc>https://clarensec.com/blog/Setting Cybersecurity Goals.html</loc>
+  <url>
+    <loc>https://clarensec.com/blog/Setting%20Cybersecurity%20Goals.html</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  </url>
-    <url>
-    <loc>https://clarensec.com/blog/cybersecurity for executives.html</loc>
+  <url>
+    <loc>https://clarensec.com/blog/cybersecurity%20for%20executives.html</loc>
     <lastmod>2026-01-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://clarensec.com/blog/Leadership & Staff- Defense for Healthcare Cybersecurity.html</loc>
+    <loc>https://clarensec.com/blog/Leadership%20%26%20Staff-%20Defense%20for%20Healthcare%20Cybersecurity.html</loc>
     <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clarensec.com/blog/simulated-phishing-tests.html</loc>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
