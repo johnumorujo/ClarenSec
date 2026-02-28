@@ -302,13 +302,5 @@
         "description": "Staff are the hospital's first line of defense. We discuss practical training and leadership alignment to prevent phishing, ransomware, and protect patient safety...",
         "link": "/blog/Leadership & Staff- Defense for Healthcare Cybersecurity.html",
         "date": "Feb 19, 2026"
-    },
-    {
-        "id": 39,
-        "image": "/images/phished.jpeg",
-        "title": "Simulated Phishing Tests: What, Why and How",
-        "description": "Learn what simulated phishing tests are, why every hospital needs them, and how to run them ethically. A practical guide to testing and strengthening your hospital's human defences...",
-        "link": "/blog/simulated-phishing-tests.html",
-        "date": "Mar 5, 2026"
     }
 ]
