@@ -1,12 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/main.css" />
-    <title>
-      Nigeria's Data Protection Laws: NDPA & the National Health Act
-    </title>
+    <title>Nigeria's Data Protection Laws: NDPA & the National Health Act</title>
     <meta
       name="description"
       content="An overview of Nigeria's data protection landscape, focusing on the NDPA and National Health Act, and their role in safeguarding sensitive health information."
@@ -30,7 +28,6 @@
       content="https://clarensec.com/blog/data-protection-laws.html"
     />
     <meta property="og:type" content="article" />
-    <!-- canonical url -->
     <link
       rel="canonical"
       href="https://clarensec.com/blog/data-protection-laws.html"
@@ -48,10 +45,7 @@
       name="twitter:image"
       content="https://clarensec.com/images/gavel.jpg"
     />
-    <!-- Standard favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
-    <!-- PNG Icons for modern browsers -->
     <link
       rel="icon"
       type="image/png"
@@ -64,8 +58,6 @@
       sizes="16x16"
       href="/images/logo/favicon-16x16.png"
     />
-
-    <!-- Apple Touch Icon -->
     <link
       rel="apple-touch-icon"
       sizes="180x180"
@@ -74,15 +66,525 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+      /* ── Reading progress bar ── */
+      .progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--accent-color),
+          var(--secondary-color)
+        );
+        z-index: 60;
+        width: 0%;
+        transition: width 0.15s linear;
+      }
+
+      /* ── Hero ── */
+      .blog-hero {
+        position: relative;
+        width: 100%;
+        min-height: 520px;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+      }
+      .blog-hero img.hero-bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease-out;
+      }
+      .blog-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          var(--primary-color) 0%,
+          rgba(20, 6, 28, 0.88) 35%,
+          rgba(71, 24, 99, 0.45) 100%
+        );
+      }
+      .blog-hero-content {
+        position: relative;
+        z-index: 1;
+        padding: 3.5rem 0;
+        width: 100%;
+      }
+      .blog-hero h1 {
+        font-size: 2.4rem;
+        line-height: 1.12;
+        font-weight: 700;
+        color: #fff;
+        max-width: 720px;
+        letter-spacing: -0.025em;
+      }
+      .blog-hero h1 .accent-word {
+        font-family: "Lora", serif;
+        font-style: italic;
+        color: var(--secondary-color);
+      }
+      @media (min-width: 768px) {
+        .blog-hero {
+          min-height: 580px;
+        }
+        .blog-hero h1 {
+          font-size: 3.5rem;
+        }
+      }
+
+      /* ── Breadcrumb ── */
+      .breadcrumb {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.55);
+        margin-bottom: 1.5rem;
+      }
+      .breadcrumb a {
+        color: rgba(255, 255, 255, 0.55);
+        transition: color 0.2s;
+      }
+      .breadcrumb a:hover {
+        color: var(--secondary-color);
+      }
+      .breadcrumb .sep {
+        margin: 0 0.5rem;
+        opacity: 0.35;
+      }
+
+      /* ── Meta pills ── */
+      .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.625rem;
+        margin-top: 1.75rem;
+      }
+      .meta-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        padding: 0.3rem 0.8rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .meta-pill svg {
+        width: 13px;
+        height: 13px;
+        stroke: var(--secondary-color);
+        fill: none;
+        stroke-width: 2;
+      }
+
+      /* ── Share / copy buttons (hero) ── */
+      .share-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        padding: 0.45rem 1rem;
+        border-radius: 999px;
+        font-size: 0.78rem;
+        font-weight: 500;
+        color: #fff;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          transform 0.15s;
+        border: 1.5px solid rgba(255, 255, 255, 0.25);
+        background: transparent;
+      }
+      .share-btn:hover {
+        background: rgba(255, 255, 255, 0.12);
+        transform: scale(1.03);
+      }
+      .share-btn svg {
+        width: 14px;
+        height: 14px;
+        fill: none;
+        stroke: #fff;
+        stroke-width: 2;
+      }
+
+      /* ── Toast ── */
+      .toast {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(120%);
+        background: var(--primary-color);
+        color: #fff;
+        padding: 0.65rem 1.5rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        z-index: 100;
+        opacity: 0;
+        transition:
+          transform 0.35s ease,
+          opacity 0.35s ease;
+        pointer-events: none;
+        box-shadow: 0 8px 24px rgba(20, 6, 28, 0.3);
+      }
+      .toast.show {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+      }
+
+      /* ── Article body ── */
+      .article-body {
+        max-width: 720px;
+        margin: 0 auto;
+        font-size: 1.0625rem;
+        line-height: 1.85;
+        color: #374151;
+      }
+      .article-body p {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+      }
+
+      /* h2 with gradient accent bar */
+      .article-body h2 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        letter-spacing: -0.01em;
+        position: relative;
+        padding-left: 1.25rem;
+      }
+      .article-body h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.15em;
+        bottom: 0.15em;
+        width: 4px;
+        border-radius: 4px;
+        background: linear-gradient(
+          to bottom,
+          var(--accent-color),
+          var(--secondary-color)
+        );
+      }
+
+      /* Custom bullet points */
+      .article-body ul {
+        margin-bottom: 1.5rem;
+        padding-left: 0;
+      }
+      .article-body ul li {
+        position: relative;
+        padding-left: 1.75rem;
+        margin-bottom: 0.875rem;
+        list-style: none;
+        text-align: justify;
+      }
+      .article-body ul li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.55em;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--accent-color),
+          var(--secondary-color)
+        );
+      }
+
+      /* Custom ordered list */
+      .article-body ol {
+        margin-bottom: 1.5rem;
+        padding-left: 0;
+        counter-reset: custom-counter;
+      }
+      .article-body ol li {
+        position: relative;
+        padding-left: 2.25rem;
+        margin-bottom: 0.875rem;
+        list-style: none;
+        text-align: justify;
+        counter-increment: custom-counter;
+      }
+      .article-body ol li::before {
+        content: counter(custom-counter);
+        position: absolute;
+        left: 0;
+        top: 0.15em;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: linear-gradient(
+          135deg,
+          var(--accent-color),
+          var(--secondary-color)
+        );
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+      }
+
+      /* Drop cap */
+      .drop-cap::first-letter {
+        float: left;
+        font-family: "Lora", serif;
+        font-size: 3.75rem;
+        line-height: 0.8;
+        padding-right: 0.6rem;
+        padding-top: 0.15rem;
+        color: var(--accent-color);
+        font-weight: 700;
+      }
+
+      /* ── Pull quote ── */
+      .pull-quote {
+        margin: 2.5rem -1rem;
+        padding: 2rem 2rem 2rem 2.75rem;
+        border-left: 4px solid var(--secondary-color);
+        background: linear-gradient(
+          135deg,
+          rgba(241, 148, 180, 0.06),
+          rgba(71, 24, 99, 0.03)
+        );
+        border-radius: 0 1rem 1rem 0;
+        font-family: "Lora", serif;
+        font-style: italic;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: var(--accent-color);
+        position: relative;
+      }
+      .pull-quote::before {
+        content: "\201C";
+        position: absolute;
+        top: -0.15rem;
+        left: 0.6rem;
+        font-size: 4rem;
+        font-family: "Lora", serif;
+        color: var(--secondary-color);
+        opacity: 0.35;
+        line-height: 1;
+      }
+
+      /* ── Section divider ── */
+      .section-divider {
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(
+          90deg,
+          var(--accent-color),
+          var(--secondary-color)
+        );
+        border-radius: 3px;
+        margin: 3rem auto;
+      }
+
+      /* ── CTA banner ── */
+      .cta-banner {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--accent-color) 100%
+        );
+        border-radius: 1.25rem;
+        padding: 3rem 2rem;
+        text-align: center;
+        color: #fff;
+        margin: 3rem 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .cta-banner::before {
+        content: "";
+        position: absolute;
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        background: rgba(241, 148, 180, 0.07);
+        top: -120px;
+        right: -100px;
+      }
+      .cta-banner::after {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background: rgba(241, 148, 180, 0.05);
+        bottom: -80px;
+        left: -60px;
+      }
+      .cta-banner h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        position: relative;
+      }
+      .cta-banner p {
+        color: rgba(255, 255, 255, 0.8);
+        max-width: 540px;
+        margin: 0 auto 1.5rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        position: relative;
+      }
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 2rem;
+        background: #fff;
+        color: var(--accent-color);
+        font-weight: 600;
+        font-size: 0.9rem;
+        border-radius: 999px;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        position: relative;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      }
+      .cta-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 28px rgba(0, 0, 0, 0.2);
+      }
+
+      /* ── Related posts ── */
+      .related-section {
+        background: #faf9fb;
+        margin-top: 4rem;
+        padding: 4rem 0;
+      }
+      .related-section .label {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+      }
+      .related-section h2 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 2rem;
+      }
+      .related-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      @media (min-width: 768px) {
+        .related-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      .related-card {
+        border-radius: 1rem;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 16px rgba(0, 0, 0, 0.05);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+        text-decoration: none;
+        color: inherit;
+        display: block;
+      }
+      .related-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 36px rgba(71, 24, 99, 0.12);
+      }
+      .related-card-img {
+        height: 200px;
+        overflow: hidden;
+      }
+      .related-card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      .related-card:hover .related-card-img img {
+        transform: scale(1.06);
+      }
+      .related-card-body {
+        padding: 1.25rem;
+      }
+      .related-card-body .tag {
+        display: inline-block;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        background: linear-gradient(135deg, #faf5ff, #fce4ec);
+        color: var(--accent-color);
+      }
+      .related-card-body h3 {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-top: 0.75rem;
+        line-height: 1.35;
+      }
+      .related-card-body .read-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.375rem;
+        margin-top: 0.875rem;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--accent-color);
+        transition: gap 0.25s ease;
+      }
+      .related-card:hover .read-link {
+        gap: 0.65rem;
+      }
+
+      /* ── Closing italic tagline ── */
+      .closing-line {
+        text-align: center;
+        font-family: "Lora", serif;
+        font-style: italic;
+        color: var(--accent-color);
+        font-size: 1.15rem;
+        margin-top: 2rem;
+      }
     </style>
     <script src="/js/main.js" defer></script>
   </head>
 
   <body>
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
     <!-- Loader Container -->
     <div
       id="loader"
-      class="fixed inset-0 bg-white bg-opacity-70 flex items-center justify-center z-100"
+      class="fixed inset-0 bg-white flex items-center justify-center z-100"
     >
       <div
         class="w-12 h-12 border-4 border-[var(--accent-color)] border-t-transparent rounded-full animate-spin"
@@ -93,12 +595,9 @@
       <div
         class="container-custom md:h-20 flex justify-between items-center relative"
       >
-        <!-- Logo -->
         <a href="/"
           ><img src="/images/logo/logo.webp" width="100" alt="logo"
         /></a>
-
-        <!-- Hamburger Button (Mobile Only) -->
         <button
           id="menu-btn"
           class="md:hidden text-black focus:outline-none z-50"
@@ -118,8 +617,6 @@
             />
           </svg>
         </button>
-
-        <!-- Navigation Links (Desktop) -->
         <ul class="hidden md:flex gap-4">
           <li><a class="inline-block px-2 py-1" href="/index.html">Home</a></li>
           <li>
@@ -135,8 +632,6 @@
             <a class="inline-block px-2 py-1" href="/contact.html">Contact</a>
           </li>
         </ul>
-
-        <!-- CTA Button (Desktop) -->
         <a
           href="/contact.html"
           class="hidden md:inline-flex text-sm p-3 px-4 text-white bg-[var(--accent-color)] rounded-4xl items-center gap-2"
@@ -158,8 +653,6 @@
             </svg>
           </div>
         </a>
-
-        <!-- Full-Screen Mobile Slide-In Menu -->
         <div
           id="mobile-menu"
           class="fixed top-0 left-0 h-screen w-full bg-white transform -translate-x-full transition-transform duration-300 ease-in-out z-40 md:hidden p-6"
@@ -201,506 +694,535 @@
       </div>
     </nav>
 
-    <main class="container-custom my-8 flex flex-col lg:flex-row gap-8">
-      <!-- second section  -->
-      <section class="lg:flex-1/3">
-        <h1 class="text-2xl lg:text-3xl font-semibold text-gray-900 mb-4">
-          Nigeria's
-          <span class="italic-text-header">Data Protection Laws</span>: NDPA &
-          the National Health Act
-        </h1>
-        <p class="mb-8 text-gray-500 text-sm">
-          Nigeria's healthcare sector is rapidly digitizing, but with this shift
-          comes heightened risks to patient privacy. This post examines how the
-          Nigeria Data Protection Act (NDPA) and the National Health Act provide
-          a foundation for protecting sensitive medical data, where the gaps
-          still exist, and why stronger enforcement is critical for patient
-          safety and national security.
-        </p>
-        <!-- ADDED SHARE AND COPY LINK FUNCTIONALITIES -->
-        <div class="flex gap-4 mb-8">
-          <button
-            type="button"
-            id="shareButton"
-            class="inline-flex items-center gap-2 p-2 rounded-md bg-gray-100 cursor-pointer text-sm"
+    <!-- HERO SECTION -->
+    <section class="blog-hero">
+      <img
+        class="hero-bg"
+        src="/images/gavel.jpg"
+        alt="Nigeria's data protection laws"
+      />
+      <div class="blog-hero-overlay"></div>
+      <div class="blog-hero-content">
+        <div class="container-custom">
+          <nav class="breadcrumb">
+            <a href="/blog/index.html">Blog</a>
+            <span class="sep">/</span>
+            <span style="color: rgba(255, 255, 255, 0.85)">Data Protection Laws</span>
+          </nav>
+
+          <h1>
+            Nigeria's
+            <span class="accent-word">Data Protection Laws:</span>
+            NDPA &amp; the National Health Act
+          </h1>
+
+          <p
+            style="
+              color: rgba(255, 255, 255, 0.65);
+              max-width: 600px;
+              margin-top: 1rem;
+              font-size: 1.05rem;
+              line-height: 1.6;
+            "
           >
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
+            An overview of Nigeria's data protection landscape, focusing on the
+            NDPA and National Health Act, and their role in safeguarding
+            sensitive health information.
+          </p>
+
+          <div class="meta-row">
+            <span class="meta-pill">
+              <svg viewBox="0 0 24 24">
                 <path
-                  d="M4 12C4 13.3807 5.11929 14.5 6.5 14.5C7.88071 14.5 9 13.3807 9 12C9 10.6193 7.88071 9.5 6.5 9.5"
-                  stroke="#1C274C"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                ></path>
+                  d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                />
+              </svg>
+              September 4, 2025
+            </span>
+            <span class="meta-pill">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
+              </svg>
+              8 min read
+            </span>
+
+            <span style="flex-grow: 1"></span>
+
+            <button type="button" id="shareBtnV1b" class="share-btn">
+              <svg viewBox="0 0 24 24">
                 <path
-                  d="M14 6.5L9 10"
-                  stroke="#1C274C"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                ></path>
-                <path
-                  d="M14 17.5L9 14"
-                  stroke="#1C274C"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                ></path>
-                <path
-                  d="M16.5 21C17.8807 21 19 19.8807 19 18.5C19 17.1193 17.8807 16 16.5 16C15.1193 16 14 17.1193 14 18.5"
-                  stroke="#1C274C"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                ></path>
-                <path
-                  d="M18.665 6.74993C17.9746 7.94566 16.4457 8.35535 15.2499 7.66499C14.0542 6.97464 13.6445 5.44566 14.3349 4.24993C15.0252 3.0542 16.5542 2.64451 17.7499 3.33487"
-                  stroke="#1C274C"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                ></path>
-              </g>
-            </svg>
-            <span>Share</span>
-          </button>
-          <button
-            type="button"
-            id="copyButton"
-            class="inline-flex items-center gap-2 p-2 rounded-md bg-gray-100 cursor-pointer text-sm"
-          >
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-              <g
-                id="SVGRepo_tracerCarrier"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              ></g>
-              <g id="SVGRepo_iconCarrier">
-                <path
-                  d="M20.9983 10C20.9862 7.82497 20.8897 6.64706 20.1213 5.87868C19.2426 5 17.8284 5 15 5H12C9.17157 5 7.75736 5 6.87868 5.87868C6 6.75736 6 8.17157 6 11V16C6 18.8284 6 20.2426 6.87868 21.1213C7.75736 22 9.17157 22 12 22H15C17.8284 22 19.2426 22 20.1213 21.1213C21 20.2426 21 18.8284 21 16V15"
-                  stroke="#1C274C"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                ></path>
-                <path
-                  d="M3 10V16C3 17.6569 4.34315 19 6 19M18 5C18 3.34315 16.6569 2 15 2H11C7.22876 2 5.34315 2 4.17157 3.17157C3.51839 3.82475 3.22937 4.69989 3.10149 6"
-                  stroke="#1C274C"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                ></path>
-              </g>
-            </svg>
-            <span>Copy</span>
-          </button>
+                  d="M4 12v8a2 2 0 002 2h12a2 2 0 002-2v-8M16 6l-4-4-4 4M12 2v13"
+                />
+              </svg>
+              Share
+            </button>
+            <button type="button" id="copyBtnV1b" class="share-btn">
+              <svg viewBox="0 0 24 24">
+                <rect x="9" y="9" width="13" height="13" rx="2" />
+                <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+              </svg>
+              Copy link
+            </button>
+          </div>
         </div>
-        <!-- SHARE AND COPY LINK FUNCTIONALITY ENDS HERE  -->
-        <img
-          src="/images/gavel.jpg"
-          alt="hooked"
-          class="my-4 rounded-lg shadow-md max-w-xl mx-auto"
-        />
-        <article class="px-4 py-8 max-w-4xl mx-auto text-justify">
-          <h2 class="text-2xl font-bold mb-4">
-            Nigeria's Data Protection Laws: NDPA & the National Health Act
-          </h2>
-          <p class="mb-4">
-            In today's Nigerian hospitals, patient information no longer lives
-            only in paper folders. It sits in EMRs, billing systems, lab
-            analyzers, imaging archives, and-too often-on shared on mobile
-            phones. That convenience creates risk. Cybercriminals target health
-            data, and one of the ways patients judge care quality by how safely
-            their information is handled. Two national laws, though grossly
-            insufficient set the ground rules: the
-            <strong>Nigeria Data Protection Act (NDPA) 2023</strong> and the
-            <strong>National Health Act (NHAct) 2014</strong>. They matter for
-            every hospital, clinic, HMO, and health-tech firm. This guide
-            explains what they require, where they fall short for healthcare,
-            and what leaders should do next.
+      </div>
+    </section>
+
+    <!-- ARTICLE BODY -->
+    <main style="padding: 3.5rem 0 0">
+      <article class="container-custom article-body">
+        <p class="drop-cap">
+          In today's Nigerian hospitals, patient information no longer lives
+          only in paper folders. It sits in EMRs, billing systems, lab
+          analyzers, imaging archives, and too often on shared mobile
+          phones. That convenience creates risk. Cybercriminals target health
+          data, and one of the ways patients judge care quality is by how safely
+          their information is handled. Two national laws, though grossly
+          insufficient, set the ground rules: the
+          <strong>Nigeria Data Protection Act (NDPA) 2023</strong> and the
+          <strong>National Health Act (NHAct) 2014</strong>. They matter for
+          every hospital, clinic, HMO, and health-tech firm. This guide
+          explains what they require, where they fall short for healthcare,
+          and what leaders should do next.
+        </p>
+
+        <div class="pull-quote">
+          Health data is deeply personal. A single leak can expose someone's
+          HIV status, reproductive health, or mental health history, leading
+          to stigma, discrimination, or blackmail.
+        </div>
+
+        <div class="section-divider"></div>
+
+        <h2>Why Patient Data Needs Extra Protection</h2>
+
+        <p>
+          Health data is deeply personal. A single leak can expose someone's
+          HIV status, reproductive health, or mental health history, leading to
+          stigma, discrimination, or blackmail. For clinicians,
+          confidentiality is a professional duty; for institutions, it is a
+          trust contract with the community. A breach opens a health facility to
+          fines and bad headlines. It disrupts services, delays treatment, and
+          increases clinical risk. That is why Nigerian law requires stronger
+          safeguards for patient information and why hospital leaders must
+          treat data protection like patient safety.
+        </p>
+
+        <div class="section-divider"></div>
+
+        <h2>The Nigeria Data Protection Act (NDPA) 2023: Core Duties</h2>
+
+        <p>
+          The NDPA is Nigeria's overarching privacy law. It applies across the
+          public and private sector and explicitly classifies health
+          information as sensitive personal data. For healthcare providers,
+          five obligations are critical:
+        </p>
+
+        <ol>
+          <li>
+            <strong>Lawful basis and explicit consent:</strong> Collect and
+            process patient data only for clear, legitimate purposes. For
+            sensitive health data, obtain explicit consent (or rely on other
+            lawful bases available in clinical, legal, or public interest
+            contexts where appropriate). This is already the default in most,
+            if not all health facilities today, as permission is often taken
+            when history is collected.
+          </li>
+          <li>
+            <strong>Data minimization and purpose limitation:</strong> Gather
+            only what is necessary for diagnosis, treatment, billing, quality
+            assurance, and similar purposes, and avoid using it later for unrelated purposes.
+            This line is quite blurry in the real setting, as seemingly
+            unimportant information can change the course of diagnosis.
+          </li>
+          <li>
+            <strong>Security safeguards:</strong> Implement technical and
+            organizational controls such as access control, encryption, logging,
+            multi-factor authentication, vendor oversight, and secure disposal
+            of data and devices.
+          </li>
+          <li>
+            <strong>Rights and transparency:</strong> Provide clear privacy
+            notices, honor patient rights (access, correction, deletion where
+            applicable), and document decisions about data use.
+          </li>
+          <li>
+            <strong>Breach response and governance:</strong> Detect, contain,
+            assess, and notify when a breach risks harm. Appoint a Data
+            Protection Officer (DPO) or named lead to oversee compliance and
+            liaise with authorities.
+          </li>
+        </ol>
+
+        <div class="section-divider"></div>
+
+        <h2>The National Health Act (2014): Confidentiality and Record-Handling</h2>
+
+        <p>
+          The NHAct is healthcare-specific in scope, but high-level in detail.
+          It establishes the duty of confidentiality for health information
+          and expects providers to keep accurate, secure records. In practice,
+          it means:
+        </p>
+
+        <ol>
+          <li>
+            <strong>Confidentiality is mandatory:</strong> Patient information
+            may be shared only with the patient's consent or under limited
+            legal or clinical exceptions (for example, public health reporting and court
+            orders).
+          </li>
+          <li>
+            <strong>Access control:</strong> Only authorized staff should view
+            or handle medical records; casual access or "shared logins"
+            undermines compliance and auditability.
+          </li>
+          <li>
+            <strong>Secure record-keeping:</strong> Providers must maintain
+            reliable, leak-resistant systems for storing and transferring
+            records, whether paper or electronic.
+          </li>
+          <li>
+            <strong>Accountability:</strong> Failures can trigger regulatory
+            sanctions and professional consequences for individuals involved.
+          </li>
+        </ol>
+
+        <div class="section-divider"></div>
+
+        <h2>How NDPA and NHAct Work Together, and Where They Fall Short</h2>
+
+        <p>
+          Think of the NDPA as the national privacy rulebook and the NHAct as
+          the healthcare conduct rulebook. Together, they require consent,
+          confidentiality, secure storage, transparency, and breach response.
+          However, both are
+          <strong>broad and not tailored to the realities of modern
+          healthcare</strong>. Critical gaps remain:
+        </p>
+
+        <ul>
+          <li>
+            <strong>No clinical-grade technical standards:</strong> There is
+            no detailed national specification for EMR security (for example,
+            encryption-at-rest expectations, audit log content and retention,
+            session timeout defaults, or change-control).
+          </li>
+          <li>
+            <strong>Limited guidance for digital health:</strong>
+            Telemedicine, remote monitoring, cloud-hosted records, and mobile
+            health apps lack sector-specific rules on data flows, vendor due
+            diligence, and data residency.
+          </li>
+          <li>
+            <strong>Interoperability and data sharing:</strong> There is no
+            health-specific framework for secure data exchange between
+            public and private hospitals, labs, HMOs, and research bodies.
+          </li>
+          <li>
+            <strong>Secondary use and research:</strong> Consent models and
+            governance for research, analytics, and AI training need
+            healthcare-focused guidance to protect patients while enabling
+            innovation.
+          </li>
+        </ul>
+
+        <p>
+          <strong>Bottom line:</strong> NDPA and NHAct provide the foundation,
+          but Nigeria needs <em>healthcare-specific</em> data regulations,
+          driven by the Federal Ministry of Health, to close these gaps and
+          align with international best practice.
+        </p>
+
+        <div class="section-divider"></div>
+
+        <h2>Practical Compliance Steps Hospitals Can Implement Now</h2>
+
+        <p>
+          Even while waiting for sector-specific rules, hospitals can
+          meaningfully reduce risk and meet current legal duties. Start with
+          the essentials and build maturity systematically:
+        </p>
+
+        <ol>
+          <li>
+            <strong>Map your data:</strong> Conduct a data inventory and
+            workflow audit. Identify what patient data you collect, where it lives
+            (EMR, LIS, PACS, backups, mobile devices), who accesses it, and
+            which vendors process it.
+          </li>
+          <li>
+            <strong>Appoint a DPO or compliance lead:</strong> Give clear
+            responsibility for policy, training, risk assessment, incident
+            handling, and regulator liaison; ensure board-level sponsorship.
+          </li>
+          <li>
+            <strong>Harden access controls:</strong> Enforce strong, unique
+            passwords; enable MFA; remove shared accounts; set automatic
+            logouts; apply least-privilege access; review access quarterly.
+          </li>
+          <li>
+            <strong>Strengthen the EMR environment:</strong> Patch
+            OS, apps, and firmware; encrypt disks and backups; separate clinical and
+            guest networks; enable audit logs and alerting; and restrict USB
+            use.
+          </li>
+          <li>
+            <strong>Test, test, test:</strong> Policies and technology alone
+            are not enough. Hospitals must regularly test their systems
+            through cybersecurity assessments such as penetration testing,
+            vulnerability scanning, and red-team exercises. These tests reveal
+            hidden weaknesses before attackers do. Think of it like a fire
+            drill for your systems: the only way to know your defenses work is
+            to put them to the test.
+          </li>
+          <li>
+            <strong>Disaster readiness:</strong> Maintain an incident playbook
+            (isolate systems, preserve evidence, triage clinical impact),
+            define roles, test with tabletop exercises, and rehearse
+            communications to patients and authorities.
+          </li>
+          <li>
+            <strong>Backup and recovery:</strong> Follow the 3-2-1 rule (three
+            copies, two media, one offsite or offline), test restores monthly,
+            and prioritize clinical systems (EMR, LIS, PACS) in recovery plans.
+          </li>
+          <li>
+            <strong>Vendor and cloud oversight:</strong> Sign data processing
+            agreements; verify security certifications; set breach
+            notification timelines; check data location and backup or restore
+            guarantees.
+          </li>
+          <li>
+            <strong>Consent and transparency:</strong> Use plain-language
+            privacy notices; capture explicit consent where required; document
+            lawful bases; provide mechanisms for patient access and correction.
+          </li>
+          <li>
+            <strong>Training and culture:</strong> Run quarterly awareness for
+            clinicians and admin staff: login hygiene, phishing awareness,
+            safe messaging (no patient PII on WhatsApp), and device security.
+          </li>
+          <li>
+            <strong>Document everything:</strong> Policies, DPIAs (risk
+            assessments for high-risk processing), training logs, vendor due
+            diligence, and breach reports. Documentation is part of compliance.
+          </li>
+        </ol>
+
+        <div class="section-divider"></div>
+
+        <h2>A Policy Note to Regulators and the FMoH</h2>
+
+        <p>
+          Nigeria would benefit from
+          <strong>healthcare-specific data protection regulations</strong>
+          under the leadership of the Federal Ministry of Health. Priorities
+          could include:
+        </p>
+
+        <ul>
+          <li>
+            Minimum security standards for EMRs, e-prescribing, LIS/PACS, and
+            connected medical devices (encryption, logs, MFA, segmentation,
+            patching).
+          </li>
+          <li>
+            Guidance on telemedicine, mobile health, and cloud hosting (data
+            residency, cross-border transfers, uptime, incident SLAs).
+          </li>
+          <li>
+            Frameworks for interoperability and secure data exchange between
+            public and private providers and HMOs.
+          </li>
+          <li>
+            Clear rules for secondary use: research, public health analytics,
+            and AI, balancing innovation with privacy.
+          </li>
+          <li>
+            Sector-specific breach thresholds, escalation routes, and
+            coordinated incident response across facilities.
+          </li>
+        </ul>
+
+        <p>
+          Such rules would protect patients, give hospitals clarity, and build
+          public trust, while enabling responsible digital health innovation
+          across Nigeria and West Africa.
+        </p>
+
+        <div class="section-divider"></div>
+
+        <h2>Clarensec's Perspective</h2>
+
+        <p>
+          Clarensec helps healthcare providers turn legal requirements into
+          daily practice through compliance gap assessments, policy
+          development, staff training, and technical hardening (including
+          penetration testing and incident readiness). Our goal is practical
+          resilience: keep patient data safe, keep services running, and build
+          trust with your community.
+        </p>
+
+        <div class="section-divider"></div>
+
+        <h2>Key Takeaways for Healthcare Leaders</h2>
+
+        <ul>
+          <li>
+            <strong>NDPA and NHAct are mandatory</strong> for all hospitals
+            handling patient data, covering consent, confidentiality,
+            security, and breach response.
+          </li>
+          <li>
+            <strong>The laws are broad, not clinical-grade,</strong> and leave
+            gaps for EMR security, telemedicine, interoperability, and
+            secondary use.
+          </li>
+          <li>
+            <strong>Act now on fundamentals:</strong> data mapping, DPO,
+            access control, training, vendor oversight, backups, and a tested
+            incident plan.
+          </li>
+          <li>
+            <strong>Advocate for sector-specific rules:</strong> the Federal
+            Ministry of Health should lead the development of healthcare data
+            standards with the national data protection authority.
+          </li>
+          <li>
+            <strong>Make this culture:</strong> leadership sets the
+            tone. Privacy and security are part of patient safety, not just IT
+            tasks.
+          </li>
+        </ul>
+
+        <p>
+          Protecting patient data is both a legal and a moral obligation. By
+          closing today's gaps with disciplined practice, and by pushing for
+          healthcare-specific rules, Nigeria can deliver safe, trusted, and
+          modern care.
+        </p>
+
+        <!-- CTA banner -->
+        <div class="cta-banner">
+          <h3>Is your hospital compliant with Nigeria's data protection laws?</h3>
+          <p>
+            We help healthcare organisations assess compliance gaps, build
+            policies, train staff, and harden systems to protect patient data
+            and meet NDPA and NHAct requirements.
           </p>
-          <h3 class="text-xl font-semibold mt-6 mb-2">
-            Why Patient Data Needs Extra Protection
-          </h3>
-          <p class="mb-4">
-            Health data is deeply personal. A single leak can expose someone's
-            HIV status, reproductive health, or mental health history-leading to
-            stigma, discrimination, or blackmail. For clinicians,
-            confidentiality is a professional duty; for institutions, it is a
-            trust contract with the community. A breach opens health facility to
-            fines and bad headlines, it disrupts services, delays treatment, and
-            increases clinical risk. That's why Nigerian law requires stronger
-            safeguards for patient information and why hospital leaders must
-            treat data protection like patient safety.
-          </p>
-          <h3 class="text-xl font-semibold mt-6 mb-2">
-            The Nigeria Data Protection Act (NDPA) 2023: Core Duties for
-            Hospitals
-          </h3>
-          <p class="mb-4">
-            The NDPA is Nigeria's overarching privacy law. It applies across the
-            public and private sector and explicitly classifies health
-            information as sensitive personal data. For healthcare providers,
-            five obligations are critical:
-          </p>
-          <ol class="list-decimal list-inside mb-4 space-y-1">
-            <li>
-              <strong>Lawful basis & explicit consent:</strong> Collect and
-              process patient data only for clear, legitimate purposes. For
-              sensitive health data, obtain explicit consent (or rely on other
-              lawful bases available in clinical, legal, or public interest
-              contexts where appropriate). This is already the default in most,
-              if not all health facilities today, as permission is often taken
-              when history is collected.
-            </li>
-            <li>
-              <strong>Data minimization & purpose limitation:</strong> Gather
-              only what is necessary for diagnosis, treatment, billing, quality
-              assurance, etc, and avoid using it later for unrelated purposes.
-              This line is quite blurry in the real setting, as seemingly
-              unimportant information can change the course of diagnosis.
-            </li>
-            <li>
-              <strong>Security safeguards:</strong> Implement technical and
-              organizational controls-access control, encryption, logging,
-              multi-factor authentication, vendor oversight, and secure disposal
-              of data and devices.
-            </li>
-            <li>
-              <strong>Rights & transparency:</strong> Provide clear privacy
-              notices, honor patient rights (access, correction, deletion where
-              applicable), and document decisions about data use.
-            </li>
-            <li>
-              <strong>Breach response & governance:</strong> Detect, contain,
-              assess, and notify when a breach risks harm. Appoint a Data
-              Protection Officer (DPO) or named lead to oversee compliance and
-              liaise with authorities.
-            </li>
-          </ol>
-          <h3 class="text-xl font-semibold mt-6 mb-2">
-            The National Health Act (2014): Confidentiality & Record-Handling
-          </h3>
-          <p class="mb-4">
-            The NHAct is healthcare-specific in scope, but high-level in detail.
-            It establishes the duty of confidentiality for health information
-            and expects providers to keep accurate, secure records. In practice,
-            it means:
-          </p>
-          <ol class="list-decimal list-inside mb-4 space-y-1">
-            <li>
-              <strong>Confidentiality is mandatory:</strong> Patient information
-              may be shared only with the patient's consent or under limited
-              legal/clinical exceptions (e.g., public health reporting, court
-              orders).
-            </li>
-            <li>
-              <strong>Access control:</strong> Only authorized staff should view
-              or handle medical records; casual access or “shared logins”
-              undermines compliance and auditability.
-            </li>
-            <li>
-              <strong>Secure record-keeping:</strong> Providers must maintain
-              reliable, leak-resistant systems for storing and transferring
-              records, whether paper or electronic.
-            </li>
-            <li>
-              <strong>Accountability:</strong> Failures can trigger regulatory
-              sanctions and professional consequences for individuals involved.
-            </li>
-          </ol>
-          <h3 class="text-xl font-semibold mt-6 mb-2">
-            How NDPA & NHAct Work Together, And Where They Fall Short
-          </h3>
-          <p class="mb-4">
-            Think of the NDPA as the national privacy rulebook and the NHAct as
-            the healthcare conduct rulebook. Together, they require consent,
-            confidentiality, secure storage, transparency, and breach response.
-            However, both are
-            <strong
-              >broad and not tailored to the realities of modern
-              healthcare</strong
-            >. Critical gaps remain:
-          </p>
-          <ul class="list-disc list-inside mb-4 space-y-1">
-            <li>
-              <strong>No clinical-grade technical standards:</strong> There is
-              no detailed national specification for EMR security (e.g.,
-              encryption-at-rest expectations, audit log content and retention,
-              session timeout defaults, or change-control).
-            </li>
-            <li>
-              <strong>Limited guidance for digital health:</strong>
-              Telemedicine, remote monitoring, cloud-hosted records, and mobile
-              health apps lack sector-specific rules on data flows, vendor due
-              diligence, and data residency.
-            </li>
-            <li>
-              <strong>Interoperability & data sharing:</strong> There is no
-              health-specific framework for secure data exchange between
-              public/private hospitals, labs, HMOs, and research bodies.
-            </li>
-            <li>
-              <strong>Secondary use & research:</strong> Consent models and
-              governance for research, analytics, and AI training need
-              healthcare-focused guidance to protect patients while enabling
-              innovation.
-            </li>
-          </ul>
-          <p class="mb-4">
-            <strong>Bottom line:</strong> NDPA + NHAct provide the foundation,
-            but Nigeria needs <em>healthcare-specific</em> data regulations,
-            driven by the Federal Ministry of Health to close these gaps and
-            align with international best practice.
-          </p>
-          <h3 class="text-xl font-semibold mt-6 mb-2">
-            Practical Compliance Steps Hospitals Can Implement Now
-          </h3>
-          <p class="mb-4">
-            Even while waiting for sector-specific rules, hospitals can
-            meaningfully reduce risk and meet current legal duties. Start with
-            the essentials and build maturity systematically:
-          </p>
-          <ol class="list-decimal list-inside mb-4 space-y-1">
-            <li>
-              <strong>Map your data:</strong> Conduct a data inventory and
-              workflow audit. What patient data you collect, where it lives
-              (EMR, LIS, PACS, backups, mobile devices), who accesses it, and
-              which vendors process it.
-            </li>
-            <li>
-              <strong>Appoint a DPO/compliance lead:</strong> Give clear
-              responsibility for policy, training, risk assessment, incident
-              handling, and regulator liaison; ensure board-level sponsorship.
-            </li>
-            <li>
-              <strong>Harden access controls:</strong> Enforce strong, unique
-              passwords; enable MFA; remove shared accounts; set automatic
-              logouts; apply least-privilege access; review access quarterly.
-            </li>
-            <li>
-              <strong>Strengthen the EMR environment:</strong> Patch
-              OS/apps/firmware, encrypt disks and backups, separate clinical and
-              guest networks, enable audit logs and alerting, and restrict USB
-              use.
-            </li>
-            <li>
-              <strong>Test, Test, Test</strong> Policies and technology alone
-              are not enough. Hospitals must regularly test their systems
-              through cybersecurity assessments such as penetration testing,
-              vulnerability scanning, and red-team exercises. These tests reveal
-              hidden weaknesses before attackers do. Think of it like a fire
-              drill for your systems: the only way to know your defenses work is
-              to put them to the test.
-            </li>
-            <li>
-              <strong>Disaster readiness:</strong> Maintain an incident playbook
-              (isolate systems, preserve evidence, triage clinical impact),
-              define roles, test with tabletop exercises, and rehearse
-              communications to patients and authorities.
-            </li>
-            <li>
-              <strong>Backup & recovery:</strong> Follow the 3-2-1 rule (three
-              copies, two media, one offsite/offline), test restores monthly,
-              and prioritize clinical systems (EMR/LIS/PACS) in recovery plans.
-            </li>
-            <li>
-              <strong>Vendor & cloud oversight:</strong> Sign data processing
-              agreements; verify security certifications; set breach
-              notification timelines; check data location and backup/restore
-              guarantees.
-            </li>
-            <li>
-              <strong>Consent & transparency:</strong> Use plain-language
-              privacy notices; capture explicit consent where required; document
-              lawful bases; provide mechanisms for patient access/correction.
-            </li>
-            <li>
-              <strong>Training & culture:</strong> Run quarterly awareness for
-              clinicians and admin staff: login hygiene, phishing awareness,
-              safe messaging (no patient PII on WhatsApp), and device security.
-            </li>
-            <li>
-              <strong>Document everything:</strong> Policies, DPIAs (risk
-              assessments for high-risk processing), training logs, vendor due
-              diligence, and breach reports-documentation is part of compliance.
-            </li>
-          </ol>
-          <h3 class="text-xl font-semibold mt-6 mb-2">
-            A Policy Note to Regulators & the FMoH
-          </h3>
-          <p class="mb-4">
-            Nigeria would benefit from
-            <strong>healthcare-specific data protection regulations</strong>
-            under the leadership of the Federal Ministry of Health. Priorities
-            could include:
-          </p>
-          <ul class="list-disc list-inside mb-4 space-y-1">
-            <li>
-              Minimum security standards for EMRs, e-prescribing, LIS/PACS, and
-              connected medical devices (encryption, logs, MFA, segmentation,
-              patching).
-            </li>
-            <li>
-              Guidance on telemedicine, mobile health, and cloud hosting (data
-              residency, cross-border transfers, uptime, incident SLAs).
-            </li>
-            <li>
-              Frameworks for interoperability and secure data exchange between
-              public/private providers and HMOs.
-            </li>
-            <li>
-              Clear rules for secondary use: research, public health analytics,
-              and AI, balancing innovation with privacy.
-            </li>
-            <li>
-              Sector-specific breach thresholds, escalation routes, and
-              coordinated incident response across facilities.
-            </li>
-          </ul>
-          <p class="mb-4">
-            Such rules would protect patients, give hospitals clarity, and build
-            public trust, while enabling responsible digital health innovation
-            across Nigeria and West Africa.
-          </p>
-          <h3 class="text-xl font-semibold mt-6 mb-2">
-            Clarensec's Perspective
-          </h3>
-          <p class="mb-4">
-            Clarensec helps healthcare providers turn legal requirements into
-            daily practice-through compliance gap assessments, policy
-            development, staff training, and technical hardening (including
-            penetration testing and incident readiness). Our goal is practical
-            resilience: keep patient data safe, keep services running, and build
-            trust with your community.
-          </p>
-          <h3 class="text-xl font-semibold mt-6 mb-2">
-            Key Takeaways for Healthcare Leaders
-          </h3>
-          <ul class="list-disc list-inside mb-4 space-y-1">
-            <li>
-              <strong>NDPA + NHAct are mandatory</strong> for all hospitals
-              handling patient data; covering consent, confidentiality,
-              security, and breach response.
-            </li>
-            <li>
-              <strong>The laws are broad, not clinical-grade,</strong> and leave
-              gaps for EMR security, telemedicine, interoperability, and
-              secondary use.
-            </li>
-            <li>
-              <strong>Act now on fundamentals:</strong> data mapping, DPO,
-              access control, training, vendor oversight, backups, and a tested
-              incident plan.
-            </li>
-            <li>
-              <strong>Advocate for sector-specific rules:</strong> the Federal
-              Ministry of Health should lead the development of healthcare data
-              standards with the national data protection authority.
-            </li>
-            <li>
-              <strong>Make this culture:</strong> leadership sets the
-              tone-privacy and security are part of patient safety, not just IT
-              tasks.
-            </li>
-          </ul>
-          <p class="mb-4">
-            Protecting patient data is both a legal and a moral obligation. By
-            closing today's gaps with disciplined practice, and by pushing for
-            healthcare-specific rules, Nigeria can deliver safe, trusted, and
-            modern care.
-          </p>
-        </article>
-      </section>
-      <!-- SECTION  -->
-      <section
-        class="lg:flex-1 flex flex-col gap-8 my-8 lg:sticky lg:top-0 h-fit"
-      >
-        <h2 class="text-2xl font-bold text-center">Related Posts</h2>
-        <article class="bg-white custom-box-shadow p-3 rounded-xl">
-          <div class="h-60 rounded-xl">
-            <img
-              src="/images/regulations.jpg"
-              width="313"
-              height="205"
-              class="w-full h-full rounded-xl"
-              alt=""
-            />
+          <a href="/contact.html" class="cta-btn">
+            Request a Consultation
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="18"
+              viewBox="0 -960 960 960"
+              width="18"
+              fill="#471863"
+            >
+              <path
+                d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <p class="closing-line">
+          Patient data deserves the same level of protection as patient life.
+          Compliance is the starting point. Culture is the destination.
+        </p>
+      </article>
+
+      <!-- RELATED POSTS -->
+      <section class="related-section">
+        <div class="container-custom">
+          <p class="label">Keep reading</p>
+          <h2>Related Posts</h2>
+          <div class="related-grid">
+            <a href="/blog/Regulations-and-standards-NDPA.html" class="related-card">
+              <div class="related-card-img">
+                <img
+                  src="/images/regulations.jpg"
+                  alt="Regulations and Standards: NDPA, NHAct and Beyond"
+                />
+              </div>
+              <div class="related-card-body">
+                <span class="tag">Compliance</span>
+                <h3>Regulations and Standards: NDPA, NHAct &amp; Beyond</h3>
+                <span class="read-link">
+                  Read article
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="14"
+                    viewBox="0 -960 960 960"
+                    width="14"
+                    fill="#471863"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </a>
+            <a href="/blog/privacy-by-design.html" class="related-card">
+              <div class="related-card-img">
+                <img
+                  src="/images/privacy.jpg"
+                  alt="Designing Privacy into Healthcare Systems"
+                />
+              </div>
+              <div class="related-card-body">
+                <span class="tag">Privacy</span>
+                <h3>Designing Privacy into Healthcare Systems</h3>
+                <span class="read-link">
+                  Read article
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="14"
+                    viewBox="0 -960 960 960"
+                    width="14"
+                    fill="#471863"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </a>
+            <a href="/blog/building-a-culture-of-privacy.html" class="related-card">
+              <div class="related-card-img">
+                <img
+                  src="/images/building privacy.jpg"
+                  alt="Building a Culture of Privacy"
+                />
+              </div>
+              <div class="related-card-body">
+                <span class="tag">Culture</span>
+                <h3>Building a Culture of Privacy</h3>
+                <span class="read-link">
+                  Read article
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="14"
+                    viewBox="0 -960 960 960"
+                    width="14"
+                    fill="#471863"
+                  >
+                    <path
+                      d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </a>
           </div>
-          <h3 class="text-xl font-semibold mt-2">
-            <span class="italic-text-header">Regulations</span> and Standards: NDPA, NHAct & Beyond
-          </h3>
-          <p class="text-gray-600">June 17, 2025</p>
-          <p class="mt-4 text-gray-600">
-            In Nigeria's hospitals, protecting patient data is not just good practice; it's a legal requirement. The Data Protection Act of 2023, and the National Health Act...
-          </p>
-          <a
-            href="/blog/Regulations-and-standards-NDPA.html"
-            class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-            >Read More</a
-          >
-        </article>
-        <article class="bg-white custom-box-shadow p-3 rounded-xl">
-          <div class="h-60 rounded-xl">
-            <img
-              src="/images/privacy.jpg"
-              width="313"
-              height="205"
-              class="w-full h-full rounded-xl"
-              alt=""
-            />
-          </div>
-          <h3 class="text-xl font-semibold mt-2">
-            Designing <span class="italic-text-header">Privacy</span> into Healthcare Systems
-          </h3>
-          <p class="text-gray-600">September 11, 2025</p>
-          <p class="mt-4 text-gray-600">
-            How Nigerian hospitals can embed privacy protections directly into their healthcare systems, ensuring patient trust and data security from the ground up...
-          </p>
-          <a
-            href="/blog/privacy-by-design.html"
-            class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-            >Read More</a
-          >
-        </article>
-        <article class="bg-white custom-box-shadow p-3 rounded-xl">
-          <div class="h-60 rounded-xl">
-            <img
-              src="/images/building privacy.jpg"
-              width="313"
-              height="205"
-              class="w-full h-full rounded-xl"
-              alt=""
-            />
-          </div>
-          <h3 class="text-xl font-semibold mt-2">
-            Building a Culture of <span class="italic-text-header">Privacy</span>
-          </h3>
-          <p class="text-gray-600">October 2, 2025</p>
-          <p class="mt-4 text-gray-600">
-            A near-miss showed one hospital that patient privacy is everyone's job. Discover how training every staff member built a culture of confidentiality and trust...
-          </p>
-          <a
-            href="/blog/building-a-culture-of-privacy.html"
-            class="text-[var(--accent-color)] mt-4 inline-block font-semibold"
-            >Read More</a
-          >
-        </article>
+        </div>
       </section>
     </main>
+
     <footer
       class="bg-[var(--primary-color)] text-white py-6 md:py-20 md:m-4 rounded-2xl relative overflow-hidden"
     >
@@ -714,21 +1236,16 @@
       <div
         class="container-custom flex flex-column md:flex-row gap-12 flex-wrap before-animate"
       >
-        <!-- FOOTER FIRST SECTION  -->
         <div class="md:flex-3">
-          <!-- FOOTER LOGO -->
           <a href="/index.html" class="mb-8 block"
             ><img src="/images/logo/logo-white.webp" width="100" alt=""
           /></a>
-
           <p class="mb-6 md:w-100">
             Our mission is to safeguard health data; one of the most sensitive
             forms of personal information, ensuring it remains secure and
             confidential at all times.
           </p>
-          <!-- FOOTER SOCIAL MEDIA LINKS  -->
           <ul class="space-x-2">
-            <!-- INSTAGRAM SOCIAL MEDIA LINK -->
             <li class="inline-block">
               <a
                 href="https://www.instagram.com/clarensecltd/"
@@ -736,20 +1253,17 @@
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448
-                                                            512"
+                  viewBox="0 0 448 512"
                   width="32"
                   height="32"
                 >
                   <path
                     fill="white"
-                    stroke-color="var(--primary-color)"
                     d="M194.4 211.7a53.3 53.3 0 1 0 59.3 88.7 53.3 53.3 0 1 0 -59.3-88.7zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12c-18.1-7.1-57.6-6.8-83.1-6.5c-4.1 0-7.9 .1-11.2 .1c-3.3 0-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5c-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2c0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2c2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5c4.1 0 7.9-.1 11.2-.1c3.3 0 7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5c6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83c0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83l0 0c-2.7-6.9-6.8-13.1-12-18.4zm-67.1 44.5A82 82 0 1 1 178.4 324.2a82 82 0 1 1 91.1-136.4zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1s2.6-7.1 5.2-9.8s6.1-4.5 9.8-5.2s7.6-.4 11.1 1.1s6.5 3.9 8.6 7s3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2s-3.9 3.2-6.2 4.2s-4.8 1.5-7.3 1.5l0 0c-3.8 0-7.5-1.1-10.6-3.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM357 389c-18.7 18.7-41.4 24.6-67 25.9c-26.4 1.5-105.6 1.5-132 0c-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132c1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0c25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9c-1.3 25.6-7.1 48.3-25.8 67z"
                   />
                 </svg>
               </a>
             </li>
-            <!-- TIKTOK SOCIAL MEDIA LINK -->
             <li class="inline-block">
               <a
                 href="https://www.tiktok.com/@clarensecltd"
@@ -760,24 +1274,14 @@
                   width="32px"
                   height="32px"
                   viewBox="0 0 256 256"
-                  id="Flat"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M232,84v40a7.99977,7.99977,0,0,1-8,8,103.32406,103.32406,0,0,1-48.00049-11.70752L176,156A76,76,0,1,1,86.59766,81.17971,7.99952,7.99952,0,0,1,96,89.05569l-.00049,41.63916a7.99971,7.99971,0,0,1-4.56689,7.22607A20.00272,20.00272,0,1,0,120,156V28a7.99977,7.99977,0,0,1,8-8h40a7.99977,7.99977,0,0,1,8,8,48.05436,48.05436,0,0,0,48,48A7.99977,7.99977,0,0,1,232,84Z"
-                    ></path>
-                  </g>
+                  <path
+                    d="M232,84v40a7.99977,7.99977,0,0,1-8,8,103.32406,103.32406,0,0,1-48.00049-11.70752L176,156A76,76,0,1,1,86.59766,81.17971,7.99952,7.99952,0,0,1,96,89.05569l-.00049,41.63916a7.99971,7.99971,0,0,1-4.56689,7.22607A20.00272,20.00272,0,1,0,120,156V28a7.99977,7.99977,0,0,1,8-8h40a7.99977,7.99977,0,0,1,8,8,48.05436,48.05436,0,0,0,48,48A7.99977,7.99977,0,0,1,232,84Z"
+                  ></path>
                 </svg>
               </a>
             </li>
-            <!-- LINKEDIN SOCIAL MEDIA LINK -->
             <li class="inline-block">
               <a
                 href="https://www.linkedin.com/company/clarensecltd"
@@ -788,31 +1292,20 @@
                   width="35"
                   height="35"
                   viewBox="0 0 256 256"
-                  id="Flat"
                   xmlns="http://www.w3.org/2000/svg"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  ></g>
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M212,28H44A16.01817,16.01817,0,0,0,28,44V212a16.01833,16.01833,0,0,0,16,16H212a16.01833,16.01833,0,0,0,16-16V44A16.01817,16.01817,0,0,0,212,28ZM96,176.001a8,8,0,1,1-16,0v-64a8,8,0,0,1,16,0ZM88,92a12,12,0,1,1,12-12A12,12,0,0,1,88,92Zm96,84.001a8,8,0,1,1-16,0v-36a20,20,0,0,0-40,0v36a8,8,0,1,1-16,0v-64a7.99729,7.99729,0,0,1,15.79492-1.77857A35.98125,35.98125,0,0,1,184,140.001Z"
-                    ></path>
-                  </g>
+                  <path
+                    d="M212,28H44A16.01817,16.01817,0,0,0,28,44V212a16.01833,16.01833,0,0,0,16,16H212a16.01833,16.01833,0,0,0,16-16V44A16.01817,16.01817,0,0,0,212,28ZM96,176.001a8,8,0,1,1-16,0v-64a8,8,0,0,1,16,0ZM88,92a12,12,0,1,1,12-12A12,12,0,0,1,88,92Zm96,84.001a8,8,0,1,1-16,0v-36a20,20,0,0,0-40,0v36a8,8,0,1,1-16,0v-64a7.99729,7.99729,0,0,1,15.79492-1.77857A35.98125,35.98125,0,0,1,184,140.001Z"
+                  ></path>
                 </svg>
               </a>
             </li>
-            <!-- X SOCIAL MEDIA LINK -->
             <li class="inline-block">
               <a href="https://x.com/clarensecltd" class="inline-block">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                   fill="white"
-                  stroke-color="var(--primary-color)"
                   width="32"
                   height="32"
                 >
@@ -824,27 +1317,25 @@
             </li>
           </ul>
         </div>
-        <!-- FOOTER QUICK LINKS  -->
         <div class="md:flex-1 w-full min-w-80">
           <ul class="space-y-2">
             <li class="font-semibold mb-4">Quick Links</li>
-            <li class="index.html"><a href="/">Home</a></li>
-            <li class="about.html"><a href="/about.html">About Us</a></li>
-            <li class="services.html"><a href="/services.html">Services</a></li>
-            <li class="blog.html"><a href="/blog/index.html">Blog</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About Us</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/blog/index.html">Blog</a></li>
           </ul>
         </div>
-        <!-- FOOTER CONTACT LINKS  -->
         <div class="md:flex-2 w-full min-w-80">
           <ul class="space-y-2">
             <li class="font-semibold mb-4">Contact</li>
-            <li class=""><span>I1 Treasure Estate, Idu Abuja.</span></li>
-            <li class="">
+            <li><span>I1 Treasure Estate, Idu Abuja.</span></li>
+            <li>
               <a href="tel:+2348143101878"><span>+2348143101878</span></a>
             </li>
-            <li class="">
+            <li>
               <a href="mailto:info@clarensec.com"
-                ><span>info@clarencesec.com</span></a
+                ><span>info@clarensec.com</span></a
               >
             </li>
           </ul>
@@ -872,9 +1363,86 @@
       <div class="container-custom">
         <div class="w-full bg-gray-400 h-[1px] md:mt-12 mt-6 mb-6"></div>
         <p class="text-sm text-center">
-          Copyright © 2026 Clarence Sec Ltd. All Rights Reserved
+          Copyright &copy; 2026 Clarence Sec Ltd. All Rights Reserved
         </p>
       </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+      // ── Reading progress ──
+      window.addEventListener("scroll", function () {
+        var st = window.scrollY;
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        var pct = h > 0 ? (st / h) * 100 : 0;
+        document.getElementById("progressBar").style.width = pct + "%";
+      });
+
+      // ── Toast ──
+      function showToast(msg) {
+        var t = document.getElementById("toast");
+        t.textContent = msg;
+        t.classList.add("show");
+        setTimeout(function () {
+          t.classList.remove("show");
+        }, 2500);
+      }
+
+      // ── Share button ──
+      var shareTitle =
+        document
+          .querySelector("h1")
+          ?.innerText.replace(/\s*\n\s*/g, " ")
+          .trim() || "";
+      var shareUrl = window.location.href;
+
+      document
+        .getElementById("shareBtnV1b")
+        ?.addEventListener("click", async function () {
+          if (navigator.share) {
+            try {
+              await navigator.share({
+                title: document.title,
+                text: shareTitle + "\n" + shareUrl,
+              });
+            } catch (e) {}
+          } else {
+            try {
+              await navigator.clipboard.writeText(shareUrl);
+              showToast("Link copied to clipboard");
+            } catch (e) {
+              var ta = document.createElement("textarea");
+              ta.value = shareUrl;
+              ta.style.position = "fixed";
+              ta.style.opacity = "0";
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand("copy");
+              document.body.removeChild(ta);
+              showToast("Link copied to clipboard");
+            }
+          }
+        });
+
+      // ── Copy button ──
+      document
+        .getElementById("copyBtnV1b")
+        ?.addEventListener("click", async function () {
+          try {
+            await navigator.clipboard.writeText(shareUrl);
+            showToast("Link copied to clipboard");
+          } catch (e) {
+            var ta = document.createElement("textarea");
+            ta.value = shareUrl;
+            ta.style.position = "fixed";
+            ta.style.opacity = "0";
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand("copy");
+            document.body.removeChild(ta);
+            showToast("Link copied to clipboard");
+          }
+        });
+    </script>
   </body>
 </html>
