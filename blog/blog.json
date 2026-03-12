@@ -310,5 +310,13 @@
         "description": "Learn what simulated phishing tests are, why every hospital needs them, and how to run them ethically. A practical guide for healthcare organisations looking to strengthen their human defences.",
         "link": "/blog/simulated-phishing-tests.html",
         "date": "March 5, 2026"
+    },
+    {
+        "id": 40,
+        "image": "/images/iot-hospital.jpg",
+        "title": "The Rise of IoT in Nigerian Hospitals: Pros and Cons",
+        "description": "Exploring how Internet of Things devices are transforming Nigerian hospitals, the benefits they bring to patient care, and the cybersecurity risks they introduce.",
+        "link": "/blog/rise-of-iot-in-nigerian-hospitals.html",
+        "date": "March 12, 2026"
     }
 ]
